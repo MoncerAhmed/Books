@@ -1,0 +1,57 @@
+platform :ios, '14.0'
+
+def shared_pods
+  use_frameworks!
+
+  # DI
+  pod 'Swinject'
+
+  # Networking
+  pod 'Moya'
+  pod 'p2.OAuth2'
+  pod 'Wormholy'
+
+  # Image
+  pod 'Nuke'
+
+  # Swift Styling and Conventions
+  pod 'SwiftLint'
+
+  # Other
+  pod 'R.swift'
+  pod 'Device'
+  pod 'AutoKeyboardScrollView'
+
+end
+
+target 'Books' do
+  use_frameworks!
+  shared_pods
+end
+
+target 'BooksTests' do
+  inherit! :search_paths
+  shared_pods
+
+  # Pods for testing
+  pod "SnapshotTesting"
+  pod 'SwiftyMocky'
+  pod 'Nimble'
+end
+
+post_install do |installer|
+    work_dir = Dir.pwd
+    Dir.glob("Pods/Target Support Files/Pods-Demo/*.xcconfig") do |xc_config_filename|
+        full_path_name = "#{work_dir}/#{xc_config_filename}"
+        xc_config = File.read(full_path_name)
+        new_xc_config = new_xc_config.sub(/GCC_PREPROCESSOR_DEFINITIONS/, 'PODS_GCC_PREPROCESSOR_DEFINITIONS')
+        File.open(full_path_name, 'w') { |file| file << new_xc_config }
+    end
+	  installer.generated_projects.each do |project|
+           project.targets.each do |target|
+               target.build_configurations.each do |config|
+                   config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '14.0'
+                end
+           end
+    end
+end
