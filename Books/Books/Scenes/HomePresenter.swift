@@ -9,7 +9,6 @@ import UIKit
 
 protocol HomePresenterProtocol {
     func set(viewController: HomeViewControllerProtocol)
-    func presentNoInternet(connected: Bool)
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -19,9 +18,5 @@ class HomePresenter: HomePresenterProtocol {
 
     func set(viewController: HomeViewControllerProtocol) {
         self.viewController = viewController
-    }
-
-    func presentNoInternet(connected: Bool) {
-        viewController?.displayNoInternet(connected: connected)
     }
 }

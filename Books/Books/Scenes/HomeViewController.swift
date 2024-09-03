@@ -6,17 +6,19 @@
 //
 
 import UIKit
-import WebKit
 
 protocol HomeViewControllerProtocol: UIViewControllerRouting {
     func set(interactor: HomeInteractorProtocol)
     func set(router: HomeRouterProtocol)
-    func displayNoInternet(connected: Bool)
+    func set(imageLoader: ImageLoaderProtocol)
 }
 
 class HomeViewController: UIViewController, HomeViewControllerProtocol {
     private var interactor: HomeInteractorProtocol?
     private var router: HomeRouterProtocol?
+    private var imageLoader: ImageLoaderProtocol?
+
+    var booksDataSource = BooksDataSource()
 
     // MARK: Outlets
 
@@ -39,14 +41,19 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
         self.router = router
     }
 
+    func set(imageLoader: ImageLoaderProtocol) {
+        self.imageLoader = imageLoader
+    }
+
+    // MARK: Setup
+
     func setupUI() {
+        // TODO: setup UI elements
     }
 
     // MARK: Display
-    func displayNoInternet(connected: Bool) {
-        DispatchQueue.main.async { [weak self] in
-//            self?.noInternetView.isHidden = connected
-        }
+    func displayBooks() {
+        // TODO: handle books display in collectionView
     }
 }
 

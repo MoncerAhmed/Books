@@ -33,7 +33,7 @@ class HomeRouter: NSObject, HomeRouterProtocol{
     func route(to scene: HomeRouter.Scene) {
         switch scene {        
         case .details:
-            // TODO: change route with books details screen
+            // TODO: change route with books details screen when implemented
             rootNavigator.setRootNavigator()
         case .home:
             rootNavigator.setHomeAsRoot()

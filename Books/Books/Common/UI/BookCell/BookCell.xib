@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Lora-Bold.ttf">
+            <string>Lora-Bold</string>
+        </array>
+        <array key="Lora-Regular.ttf">
+            <string>Lora-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="BookCell" translatesAutoresizingMaskIntoConstraints="NO" id="1r2-TD-Cjv" customClass="BookCell" customModule="Books" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="207"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="TjD-Oe-fNj">
+                <rect key="frame" x="0.0" y="0.0" width="335" height="207"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-W0-I7h" customClass="RoundedView" customModule="Books">
+                        <rect key="frame" x="0.0" y="0.0" width="335" height="207"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PVw-SZ-PBo" userLabel="bookImageView">
+                                <rect key="frame" x="0.0" y="0.0" width="335" height="207"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PVw-SZ-PBo" firstAttribute="top" secondItem="aNf-W0-I7h" secondAttribute="top" id="DyG-Xj-SAC"/>
+                            <constraint firstItem="PVw-SZ-PBo" firstAttribute="leading" secondItem="aNf-W0-I7h" secondAttribute="leading" id="Ky2-HO-beB"/>
+                            <constraint firstAttribute="bottom" secondItem="PVw-SZ-PBo" secondAttribute="bottom" id="c1l-Ye-AB7"/>
+                            <constraint firstAttribute="trailing" secondItem="PVw-SZ-PBo" secondAttribute="trailing" id="xSo-xJ-pYX"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLR-A3-gs9">
+                        <rect key="frame" x="256" y="0.0" width="70" height="70"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="70" id="Oxk-xH-kTC"/>
+                            <constraint firstAttribute="height" constant="70" id="WxD-ux-O0u"/>
+                        </constraints>
+                        <state key="normal">
+                            <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </button>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-nJ-jKt" customClass="RoundedView" customModule="EoF" customModuleProvider="target">
+                        <rect key="frame" x="18" y="122.33333333333331" width="299" height="74.666666666666686"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bmQ-L6-97Y">
+                                <rect key="frame" x="18" y="10.000000000000011" width="263" height="49.666666666666657"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bou-lI-m7X">
+                                        <rect key="frame" x="0.0" y="0.0" width="263" height="22.333333333333332"/>
+                                        <fontDescription key="fontDescription" name="Lora-Bold" family="Lora" pointSize="19"/>
+                                        <color key="highlightedColor" name="label_primary"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNB-0d-oYD">
+                                        <rect key="frame" x="0.0" y="34.333333333333314" width="263" height="15.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="Lora-Regular" family="Lora" pointSize="13"/>
+                                        <nil key="textColor"/>
+                                        <color key="highlightedColor" name="label_secondary"/>
+                                    </label>
+                                </subviews>
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bmQ-L6-97Y" firstAttribute="leading" secondItem="OhU-nJ-jKt" secondAttribute="leading" constant="18" id="1bJ-vQ-aHK"/>
+                            <constraint firstAttribute="trailing" secondItem="bmQ-L6-97Y" secondAttribute="trailing" constant="18" id="5XO-2z-lvP"/>
+                            <constraint firstItem="bmQ-L6-97Y" firstAttribute="top" secondItem="OhU-nJ-jKt" secondAttribute="top" constant="10" id="rwu-s2-pYJ"/>
+                            <constraint firstAttribute="bottom" secondItem="bmQ-L6-97Y" secondAttribute="bottom" constant="15" id="zmF-bE-Clt"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="20"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="OhU-nJ-jKt" firstAttribute="leading" secondItem="TjD-Oe-fNj" secondAttribute="leading" constant="18" id="2Ip-QI-gZL"/>
+                    <constraint firstAttribute="trailing" secondItem="OhU-nJ-jKt" secondAttribute="trailing" constant="18" id="3Ef-cP-tyu"/>
+                    <constraint firstItem="aNf-W0-I7h" firstAttribute="top" secondItem="TjD-Oe-fNj" secondAttribute="top" id="5JJ-6B-LGT"/>
+                    <constraint firstAttribute="bottom" secondItem="aNf-W0-I7h" secondAttribute="bottom" id="82m-W4-qfh"/>
+                    <constraint firstAttribute="trailing" secondItem="aNf-W0-I7h" secondAttribute="trailing" id="GON-TV-0kg"/>
+                    <constraint firstItem="ZLR-A3-gs9" firstAttribute="top" secondItem="TjD-Oe-fNj" secondAttribute="top" id="RZ8-Tr-x3K"/>
+                    <constraint firstAttribute="trailing" secondItem="ZLR-A3-gs9" secondAttribute="trailing" constant="9" id="VCQ-wt-kBV"/>
+                    <constraint firstAttribute="bottom" secondItem="OhU-nJ-jKt" secondAttribute="bottom" constant="10" id="lyo-9y-TsS"/>
+                    <constraint firstItem="aNf-W0-I7h" firstAttribute="leading" secondItem="TjD-Oe-fNj" secondAttribute="leading" id="tZV-fi-amn"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
+                </userDefinedRuntimeAttributes>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="bookAuthorLabel" destination="YNB-0d-oYD" id="oHD-9T-qBV"/>
+                <outlet property="bookImageView" destination="PVw-SZ-PBo" id="Hde-le-UIL"/>
+                <outlet property="bookTitleLabel" destination="bou-lI-m7X" id="gN4-OG-3Ru"/>
+                <outlet property="favoritesButton" destination="ZLR-A3-gs9" id="Pqh-Na-rNk"/>
+            </connections>
+            <point key="canvasLocation" x="-495" y="-5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <namedColor name="label_primary">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="label_secondary">
+            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
