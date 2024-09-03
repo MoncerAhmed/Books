@@ -6,6 +6,7 @@ def shared_pods
   # DI
   pod 'Swinject'
   pod 'SwinjectAutoregistration'
+  pod 'SwinjectStoryboard'
 
   # Networking
   pod 'Moya'

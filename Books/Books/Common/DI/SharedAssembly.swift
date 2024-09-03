@@ -44,8 +44,8 @@ class SharedAssembly: Assembly {
         container.autoregister(ErrorHandlerProtocol.self, initializer: ErrorHandler.init)
 
         // MARK: - Home
-//        container.register(Storyboard.self, name: R.storyboard.home.name) { _ in
-//            return HomeStoryboard(sharedContainer: container, assembly: HomeAssembly())
-//        }
+        container.register(Storyboard.self, name: R.storyboard.home.name) { _ in
+            return HomeStoryboard(sharedContainer: container, assembly: HomeAssembly())
+        }
     }
 }

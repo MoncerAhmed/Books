@@ -8,6 +8,7 @@
 //sourcery: AutoMockable
 protocol RootNavigatorProtocol: AnyObject {
     func setRootNavigator()
+    func setHomeAsRoot()
 }
 
 class RootNavigator: RootNavigatorProtocol {
@@ -21,6 +22,11 @@ class RootNavigator: RootNavigatorProtocol {
     }
 
     func setRootNavigator() {
+        setHomeAsRoot()
+    }
+
+    func setHomeAsRoot() {
         application.rootViewController = homeStoryboard.initial()
     }
+
 }

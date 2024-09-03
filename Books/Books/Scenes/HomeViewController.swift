@@ -6,14 +6,48 @@
 //
 
 import UIKit
+import WebKit
 
-class HomeViewController: UIViewController {
+protocol HomeViewControllerProtocol: UIViewControllerRouting {
+    func set(interactor: HomeInteractorProtocol)
+    func set(router: HomeRouterProtocol)
+    func displayNoInternet(connected: Bool)
+}
+
+class HomeViewController: UIViewController, HomeViewControllerProtocol {
+    private var interactor: HomeInteractorProtocol?
+    private var router: HomeRouterProtocol?
+
+    // MARK: Outlets
+
+
+    // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        interactor?.handleViewDidLoad()
+        setupUI()
     }
 
+    // MARK: DI
 
+    func set(interactor: HomeInteractorProtocol) {
+        self.interactor = interactor
+    }
+
+    func set(router: HomeRouterProtocol) {
+        self.router = router
+    }
+
+    func setupUI() {
+    }
+
+    // MARK: Display
+    func displayNoInternet(connected: Bool) {
+        DispatchQueue.main.async { [weak self] in
+//            self?.noInternetView.isHidden = connected
+        }
+    }
 }
+
 

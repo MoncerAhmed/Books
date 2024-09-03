@@ -10,6 +10,16 @@
 		0457367003D9CBD91D12832A /* Pods_BooksTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 31B99F3BAA129A218238611D /* Pods_BooksTests.framework */; };
 		9FDA793E76AB4D3A76432B03 /* Pods_Books.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A30FCBF558607D86D8E05CFD /* Pods_Books.framework */; };
 		E24E43082C871782004199C2 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E24E43072C871782004199C2 /* Home.storyboard */; };
+		E24E430D2C872408004199C2 /* HomeInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E430C2C872408004199C2 /* HomeInteractor.swift */; };
+		E24E430F2C87242E004199C2 /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E430E2C87242E004199C2 /* HomePresenter.swift */; };
+		E24E43112C8725A5004199C2 /* ImageLoaderProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E43102C8725A5004199C2 /* ImageLoaderProtocol.swift */; };
+		E24E43132C8725D4004199C2 /* RoundedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E43122C8725D4004199C2 /* RoundedImageView.swift */; };
+		E24E43152C872AF9004199C2 /* Provider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E43142C872AF9004199C2 /* Provider.swift */; };
+		E24E43172C872DE9004199C2 /* HomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E43162C872DE9004199C2 /* HomeRouter.swift */; };
+		E24E431A2C872F3C004199C2 /* HomeStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E43192C872F3C004199C2 /* HomeStoryboard.swift */; };
+		E24E431C2C872FDD004199C2 /* HomeStoryboardId.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E431B2C872FDD004199C2 /* HomeStoryboardId.swift */; };
+		E24E431E2C87305E004199C2 /* HomeAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E431D2C87305E004199C2 /* HomeAssembly.swift */; };
+		E24E43202C8734E6004199C2 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E24E431F2C8734E6004199C2 /* R.generated.swift */; };
 		E250E2F02C85EF4F00962FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E250E2EF2C85EF4F00962FDC /* AppDelegate.swift */; };
 		E250E2F42C85EF4F00962FDC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E250E2F32C85EF4F00962FDC /* HomeViewController.swift */; };
 		E250E2F92C85EF5000962FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E250E2F82C85EF5000962FDC /* Assets.xcassets */; };
@@ -17,7 +27,6 @@
 		E250E3072C85EF5000962FDC /* BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E250E3062C85EF5000962FDC /* BooksTests.swift */; };
 		E250E3112C85EF5000962FDC /* BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E250E3102C85EF5000962FDC /* BooksUITests.swift */; };
 		E250E3132C85EF5000962FDC /* BooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E250E3122C85EF5000962FDC /* BooksUITestsLaunchTests.swift */; };
-		E2D2C7ED2C860A6E00F8D573 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2C7EC2C860A6E00F8D573 /* R.generated.swift */; };
 		E2D2C7EF2C861E6600F8D573 /* BooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2C7EE2C861E6600F8D573 /* BooksApp.swift */; };
 		E2F3BE152C870EE800C86BA7 /* Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3BE142C870EE800C86BA7 /* Stroryboard.swift */; };
 		E2F3BE172C870FA600C86BA7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3BE162C870FA600C86BA7 /* AppError.swift */; };
@@ -61,6 +70,16 @@
 		A30FCBF558607D86D8E05CFD /* Pods_Books.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Books.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8DCD11D91E8F95C860DD979 /* Pods-Books.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Books.debug.xcconfig"; path = "Target Support Files/Pods-Books/Pods-Books.debug.xcconfig"; sourceTree = "<group>"; };
 		E24E43072C871782004199C2 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		E24E430C2C872408004199C2 /* HomeInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInteractor.swift; sourceTree = "<group>"; };
+		E24E430E2C87242E004199C2 /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
+		E24E43102C8725A5004199C2 /* ImageLoaderProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoaderProtocol.swift; sourceTree = "<group>"; };
+		E24E43122C8725D4004199C2 /* RoundedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedImageView.swift; sourceTree = "<group>"; };
+		E24E43142C872AF9004199C2 /* Provider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Provider.swift; sourceTree = "<group>"; };
+		E24E43162C872DE9004199C2 /* HomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeRouter.swift; sourceTree = "<group>"; };
+		E24E43192C872F3C004199C2 /* HomeStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoryboard.swift; sourceTree = "<group>"; };
+		E24E431B2C872FDD004199C2 /* HomeStoryboardId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeStoryboardId.swift; sourceTree = "<group>"; };
+		E24E431D2C87305E004199C2 /* HomeAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAssembly.swift; sourceTree = "<group>"; };
+		E24E431F2C8734E6004199C2 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		E250E2EC2C85EF4F00962FDC /* Books.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Books.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E250E2EF2C85EF4F00962FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E250E2F32C85EF4F00962FDC /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -72,7 +91,6 @@
 		E250E30C2C85EF5000962FDC /* BooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E250E3102C85EF5000962FDC /* BooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksUITests.swift; sourceTree = "<group>"; };
 		E250E3122C85EF5000962FDC /* BooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E2D2C7EC2C860A6E00F8D573 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		E2D2C7EE2C861E6600F8D573 /* BooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksApp.swift; sourceTree = "<group>"; };
 		E2F3BE142C870EE800C86BA7 /* Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroryboard.swift; sourceTree = "<group>"; };
 		E2F3BE162C870FA600C86BA7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -147,10 +165,19 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
+		E24E43182C872F20004199C2 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E24E43192C872F3C004199C2 /* HomeStoryboard.swift */,
+				E24E431B2C872FDD004199C2 /* HomeStoryboardId.swift */,
+				E24E431D2C87305E004199C2 /* HomeAssembly.swift */,
+			);
+			name = DI;
+			sourceTree = "<group>";
+		};
 		E250E2E32C85EF4F00962FDC = {
 			isa = PBXGroup;
 			children = (
-				E2D2C7EC2C860A6E00F8D573 /* R.generated.swift */,
 				E250E2EE2C85EF4F00962FDC /* Books */,
 				E250E3052C85EF5000962FDC /* BooksTests */,
 				E250E30F2C85EF5000962FDC /* BooksUITests */,
@@ -203,6 +230,7 @@
 		E256AAEA2C85F41000F669F3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				E24E43142C872AF9004199C2 /* Provider.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -211,6 +239,7 @@
 			isa = PBXGroup;
 			children = (
 				E250E2EF2C85EF4F00962FDC /* AppDelegate.swift */,
+				E24E431F2C8734E6004199C2 /* R.generated.swift */,
 				E2D2C7EE2C861E6600F8D573 /* BooksApp.swift */,
 				E2F3BE2B2C8713AB00C86BA7 /* Constants.swift */,
 			);
@@ -242,7 +271,11 @@
 		E28CDBC12C85F06B0066E37F /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E24E43182C872F20004199C2 /* DI */,
 				E250E2F32C85EF4F00962FDC /* HomeViewController.swift */,
+				E24E430E2C87242E004199C2 /* HomePresenter.swift */,
+				E24E430C2C872408004199C2 /* HomeInteractor.swift */,
+				E24E43162C872DE9004199C2 /* HomeRouter.swift */,
 			);
 			name = Home;
 			sourceTree = "<group>";
@@ -274,6 +307,7 @@
 				E2F3BE222C87117100C86BA7 /* UIViewControllerRouting.swift */,
 				E2F3BE242C87128800C86BA7 /* NetworkObserverProtocol.swift */,
 				E2F3BE302C87152400C86BA7 /* RootNavigatorProtocol.swift */,
+				E24E43102C8725A5004199C2 /* ImageLoaderProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -291,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				E2F3BE2E2C8714C600C86BA7 /* RoundedView.swift */,
+				E24E43122C8725D4004199C2 /* RoundedImageView.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -540,24 +575,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E24E43112C8725A5004199C2 /* ImageLoaderProtocol.swift in Sources */,
+				E24E430F2C87242E004199C2 /* HomePresenter.swift in Sources */,
 				E2F3BE282C8712EC00C86BA7 /* ProviderError.swift in Sources */,
 				E2F3BE2C2C8713AB00C86BA7 /* Constants.swift in Sources */,
+				E24E43152C872AF9004199C2 /* Provider.swift in Sources */,
 				E2F3BE342C8715D900C86BA7 /* SharedAssembly.swift in Sources */,
+				E24E431E2C87305E004199C2 /* HomeAssembly.swift in Sources */,
+				E24E430D2C872408004199C2 /* HomeInteractor.swift in Sources */,
 				E2F3BE2F2C8714C600C86BA7 /* RoundedView.swift in Sources */,
 				E2F3BE1B2C87106B00C86BA7 /* UIApplicationProtocol.swift in Sources */,
 				E250E2F42C85EF4F00962FDC /* HomeViewController.swift in Sources */,
 				E2F3BE252C87128800C86BA7 /* NetworkObserverProtocol.swift in Sources */,
 				E2F3BE232C87117100C86BA7 /* UIViewControllerRouting.swift in Sources */,
 				E2F3BE2A2C87134100C86BA7 /* ClientError.swift in Sources */,
+				E24E431A2C872F3C004199C2 /* HomeStoryboard.swift in Sources */,
+				E24E43202C8734E6004199C2 /* R.generated.swift in Sources */,
 				E2D2C7EF2C861E6600F8D573 /* BooksApp.swift in Sources */,
+				E24E43172C872DE9004199C2 /* HomeRouter.swift in Sources */,
 				E2F3BE192C87103700C86BA7 /* NWPathMonitorProtocol.swift in Sources */,
 				E250E2F02C85EF4F00962FDC /* AppDelegate.swift in Sources */,
+				E24E431C2C872FDD004199C2 /* HomeStoryboardId.swift in Sources */,
+				E24E43132C8725D4004199C2 /* RoundedImageView.swift in Sources */,
 				E2F3BE152C870EE800C86BA7 /* Stroryboard.swift in Sources */,
 				E2F3BE212C87114400C86BA7 /* TopViewControllerProtocol.swift in Sources */,
 				E2F3BE1F2C8710F000C86BA7 /* AlertPresenterProtocol.swift in Sources */,
 				E2F3BE312C87152400C86BA7 /* RootNavigatorProtocol.swift in Sources */,
 				E2F3BE1D2C8710AF00C86BA7 /* ErrorHandlerProtocol.swift in Sources */,
-				E2D2C7ED2C860A6E00F8D573 /* R.generated.swift in Sources */,
 				E2F3BE172C870FA600C86BA7 /* AppError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -737,6 +781,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Books/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -767,6 +812,7 @@
 				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Books/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = NO;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
