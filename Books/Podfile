@@ -5,6 +5,7 @@ def shared_pods
 
   # DI
   pod 'Swinject'
+  pod 'SwinjectAutoregistration'
 
   # Networking
   pod 'Moya'
@@ -21,6 +22,7 @@ def shared_pods
   pod 'R.swift'
   pod 'Device'
   pod 'AutoKeyboardScrollView'
+  pod 'lottie-ios'
 
 end
 
