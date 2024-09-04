@@ -43,7 +43,7 @@ class BooksApp: NSObject, BaseAppProtocol {
     }
 
     func prepare() {
-        rootNavigator.setRootNavigator()
+        rootNavigator.setTabBarAsRoot()
         networkObserver.startMonitoringNetwork()
     }
 }

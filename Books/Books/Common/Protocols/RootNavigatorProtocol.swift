@@ -8,25 +8,27 @@
 //sourcery: AutoMockable
 protocol RootNavigatorProtocol: AnyObject {
     func setRootNavigator()
-    func setHomeAsRoot()
+    func setTabBarAsRoot()
 }
 
 class RootNavigator: RootNavigatorProtocol {
     private var application: UIApplicationProtocol
-    private let homeStoryboard: Storyboard
+    private let tabBarStoryboard: Storyboard
+
 
     init(application: UIApplicationProtocol,
-         homeStoryboard: Storyboard) {
+         tabBarStoryboard: Storyboard
+    ) {
         self.application = application
-        self.homeStoryboard = homeStoryboard
+        self.tabBarStoryboard = tabBarStoryboard
     }
 
     func setRootNavigator() {
-        setHomeAsRoot()
+        setTabBarAsRoot()
     }
 
-    func setHomeAsRoot() {
-        application.rootViewController = homeStoryboard.initial()
+    func setTabBarAsRoot() {
+        application.rootViewController = tabBarStoryboard.initial()
     }
 
 }

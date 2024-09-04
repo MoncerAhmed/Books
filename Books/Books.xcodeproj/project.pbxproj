@@ -34,6 +34,33 @@
 		E29C11552C87595F002469A3 /* BooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11542C87595F002469A3 /* BooksResponse.swift */; };
 		E29C11582C875AC8002469A3 /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11572C875AC8002469A3 /* BooksModel.swift */; };
 		E29C115A2C875AED002469A3 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11592C875AED002469A3 /* BookModel.swift */; };
+		E29C115E2C876931002469A3 /* BooksTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C115D2C876931002469A3 /* BooksTarget.swift */; };
+		E29C11612C8769CB002469A3 /* BooksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11602C8769CB002469A3 /* BooksService.swift */; };
+		E29C11642C876CB8002469A3 /* OptionalExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11632C876CB8002469A3 /* OptionalExtensions.swift */; };
+		E29C11682C8853BA002469A3 /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11672C8853BA002469A3 /* TabBarViewController.swift */; };
+		E29C116A2C8853C7002469A3 /* TabBarInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11692C8853C7002469A3 /* TabBarInteractor.swift */; };
+		E29C116C2C885418002469A3 /* TabBarPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C116B2C885418002469A3 /* TabBarPresenter.swift */; };
+		E29C116E2C88546B002469A3 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C116D2C88546B002469A3 /* TabBarItem.swift */; };
+		E29C11702C885B15002469A3 /* TabBarProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C116F2C885B15002469A3 /* TabBarProvider.swift */; };
+		E29C11722C885B82002469A3 /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E29C11712C885B82002469A3 /* TabBar.storyboard */; };
+		E29C11752C885D8A002469A3 /* AppNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11742C885D8A002469A3 /* AppNavigationController.swift */; };
+		E29C11772C885E37002469A3 /* UITabBar+SectionIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11762C885E37002469A3 /* UITabBar+SectionIndicator.swift */; };
+		E29C11792C88636F002469A3 /* TabBarAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11782C88636F002469A3 /* TabBarAssembly.swift */; };
+		E29C117C2C886878002469A3 /* TabBarStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C117B2C886878002469A3 /* TabBarStoryboard.swift */; };
+		E29C11812C88690C002469A3 /* SettingsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11802C88690C002469A3 /* SettingsAssembly.swift */; };
+		E29C11832C886919002469A3 /* FavoritesAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11822C886919002469A3 /* FavoritesAssembly.swift */; };
+		E29C11852C886929002469A3 /* FavoritesStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11842C886929002469A3 /* FavoritesStoryboard.swift */; };
+		E29C11872C886935002469A3 /* SettingsStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11862C886935002469A3 /* SettingsStoryboard.swift */; };
+		E29C118D2C886B6D002469A3 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C118C2C886B6D002469A3 /* FavoritesViewController.swift */; };
+		E29C118F2C886BD2002469A3 /* Favorites.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E29C118E2C886BD2002469A3 /* Favorites.storyboard */; };
+		E29C11912C886C09002469A3 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11902C886C09002469A3 /* SettingsViewController.swift */; };
+		E29C11932C886C67002469A3 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E29C11922C886C67002469A3 /* Settings.storyboard */; };
+		E29C11952C887134002469A3 /* FavoritesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11942C887134002469A3 /* FavoritesInteractor.swift */; };
+		E29C11972C88713D002469A3 /* FavoritesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11962C88713D002469A3 /* FavoritesPresenter.swift */; };
+		E29C11992C88714A002469A3 /* FavoritesRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11982C88714A002469A3 /* FavoritesRouter.swift */; };
+		E29C119B2C887155002469A3 /* SettingsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C119A2C887155002469A3 /* SettingsInteractor.swift */; };
+		E29C119D2C887160002469A3 /* SettingsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C119C2C887160002469A3 /* SettingsPresenter.swift */; };
+		E29C119F2C8877B6002469A3 /* FavoritesStoryboardId.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C119E2C8877B6002469A3 /* FavoritesStoryboardId.swift */; };
 		E2D2C7EF2C861E6600F8D573 /* BooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2C7EE2C861E6600F8D573 /* BooksApp.swift */; };
 		E2F3BE152C870EE800C86BA7 /* Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3BE142C870EE800C86BA7 /* Stroryboard.swift */; };
 		E2F3BE172C870FA600C86BA7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3BE162C870FA600C86BA7 /* AppError.swift */; };
@@ -105,6 +132,33 @@
 		E29C11542C87595F002469A3 /* BooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksResponse.swift; sourceTree = "<group>"; };
 		E29C11572C875AC8002469A3 /* BooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 		E29C11592C875AED002469A3 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		E29C115D2C876931002469A3 /* BooksTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTarget.swift; sourceTree = "<group>"; };
+		E29C11602C8769CB002469A3 /* BooksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksService.swift; sourceTree = "<group>"; };
+		E29C11632C876CB8002469A3 /* OptionalExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionalExtensions.swift; sourceTree = "<group>"; };
+		E29C11672C8853BA002469A3 /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		E29C11692C8853C7002469A3 /* TabBarInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarInteractor.swift; sourceTree = "<group>"; };
+		E29C116B2C885418002469A3 /* TabBarPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarPresenter.swift; sourceTree = "<group>"; };
+		E29C116D2C88546B002469A3 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		E29C116F2C885B15002469A3 /* TabBarProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarProvider.swift; sourceTree = "<group>"; };
+		E29C11712C885B82002469A3 /* TabBar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBar.storyboard; sourceTree = "<group>"; };
+		E29C11742C885D8A002469A3 /* AppNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppNavigationController.swift; sourceTree = "<group>"; };
+		E29C11762C885E37002469A3 /* UITabBar+SectionIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBar+SectionIndicator.swift"; sourceTree = "<group>"; };
+		E29C11782C88636F002469A3 /* TabBarAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarAssembly.swift; sourceTree = "<group>"; };
+		E29C117B2C886878002469A3 /* TabBarStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarStoryboard.swift; sourceTree = "<group>"; };
+		E29C11802C88690C002469A3 /* SettingsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsAssembly.swift; sourceTree = "<group>"; };
+		E29C11822C886919002469A3 /* FavoritesAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesAssembly.swift; sourceTree = "<group>"; };
+		E29C11842C886929002469A3 /* FavoritesStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStoryboard.swift; sourceTree = "<group>"; };
+		E29C11862C886935002469A3 /* SettingsStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStoryboard.swift; sourceTree = "<group>"; };
+		E29C118C2C886B6D002469A3 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		E29C118E2C886BD2002469A3 /* Favorites.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Favorites.storyboard; sourceTree = "<group>"; };
+		E29C11902C886C09002469A3 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E29C11922C886C67002469A3 /* Settings.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Settings.storyboard; sourceTree = "<group>"; };
+		E29C11942C887134002469A3 /* FavoritesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesInteractor.swift; sourceTree = "<group>"; };
+		E29C11962C88713D002469A3 /* FavoritesPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesPresenter.swift; sourceTree = "<group>"; };
+		E29C11982C88714A002469A3 /* FavoritesRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesRouter.swift; sourceTree = "<group>"; };
+		E29C119A2C887155002469A3 /* SettingsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsInteractor.swift; sourceTree = "<group>"; };
+		E29C119C2C887160002469A3 /* SettingsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPresenter.swift; sourceTree = "<group>"; };
+		E29C119E2C8877B6002469A3 /* FavoritesStoryboardId.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesStoryboardId.swift; sourceTree = "<group>"; };
 		E2D2C7EE2C861E6600F8D573 /* BooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksApp.swift; sourceTree = "<group>"; };
 		E2F3BE142C870EE800C86BA7 /* Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroryboard.swift; sourceTree = "<group>"; };
 		E2F3BE162C870FA600C86BA7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -174,7 +228,10 @@
 			isa = PBXGroup;
 			children = (
 				E250E2FA2C85EF5000962FDC /* LaunchScreen.storyboard */,
+				E29C11712C885B82002469A3 /* TabBar.storyboard */,
 				E24E43072C871782004199C2 /* Home.storyboard */,
+				E29C118E2C886BD2002469A3 /* Favorites.storyboard */,
+				E29C11922C886C67002469A3 /* Settings.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -250,17 +307,10 @@
 			path = BooksUITests;
 			sourceTree = "<group>";
 		};
-		E256AAEA2C85F41000F669F3 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-				E24E43142C872AF9004199C2 /* Provider.swift */,
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
 		E256AAEB2C85F41D00F669F3 /* App */ = {
 			isa = PBXGroup;
 			children = (
+				E2F3BE322C8715C000C86BA7 /* DI */,
 				E250E2EF2C85EF4F00962FDC /* AppDelegate.swift */,
 				E24E431F2C8734E6004199C2 /* R.generated.swift */,
 				E2D2C7EE2C861E6600F8D573 /* BooksApp.swift */,
@@ -272,13 +322,12 @@
 		E28CDBBF2C85EFC70066E37F /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				E29C11562C875AA6002469A3 /* Model */,
-				E29C114F2C875811002469A3 /* Data */,
-				E2F3BE322C8715C000C86BA7 /* DI */,
+				E29C11732C885D70002469A3 /* AppNavigator */,
+				E29C11622C876C5F002469A3 /* Extensions */,
+				E29C114F2C875811002469A3 /* Network */,
 				E2F3BE2D2C8714B900C86BA7 /* UI */,
 				E2F3BE262C8712C600C86BA7 /* Errors */,
 				E2F3BE132C870ED200C86BA7 /* Protocols */,
-				E256AAEA2C85F41000F669F3 /* Network */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -286,9 +335,11 @@
 		E28CDBC02C85EFCE0066E37F /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				E29C11652C88535D002469A3 /* TabBar */,
 				E28CDBC12C85F06B0066E37F /* Home */,
 				E28CDBC22C85F07B0066E37F /* BookDetails */,
 				E28CDBC32C85F08D0066E37F /* Favourites */,
+				E29C117A2C886774002469A3 /* Settings */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -316,6 +367,11 @@
 		E28CDBC32C85F08D0066E37F /* Favourites */ = {
 			isa = PBXGroup;
 			children = (
+				E29C117D2C8868D3002469A3 /* DI */,
+				E29C118C2C886B6D002469A3 /* FavoritesViewController.swift */,
+				E29C11942C887134002469A3 /* FavoritesInteractor.swift */,
+				E29C11962C88713D002469A3 /* FavoritesPresenter.swift */,
+				E29C11982C88714A002469A3 /* FavoritesRouter.swift */,
 			);
 			name = Favourites;
 			sourceTree = "<group>";
@@ -328,13 +384,16 @@
 			name = DataSource;
 			sourceTree = "<group>";
 		};
-		E29C114F2C875811002469A3 /* Data */ = {
+		E29C114F2C875811002469A3 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				E29C11512C875825002469A3 /* Favorites */,
-				E29C11502C875819002469A3 /* Books */,
+				E24E43142C872AF9004199C2 /* Provider.swift */,
+				E29C115F2C87699E002469A3 /* Services */,
+				E29C115C2C87691E002469A3 /* Target */,
+				E29C11562C875AA6002469A3 /* Models */,
+				E29C115B2C8768FF002469A3 /* Response */,
 			);
-			path = Data;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		E29C11502C875819002469A3 /* Books */ = {
@@ -353,18 +412,113 @@
 			path = Favorites;
 			sourceTree = "<group>";
 		};
-		E29C11562C875AA6002469A3 /* Model */ = {
+		E29C11562C875AA6002469A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				E29C11572C875AC8002469A3 /* BooksModel.swift */,
 				E29C11592C875AED002469A3 /* BookModel.swift */,
 			);
-			path = Model;
+			path = Models;
+			sourceTree = "<group>";
+		};
+		E29C115B2C8768FF002469A3 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				E29C11502C875819002469A3 /* Books */,
+				E29C11512C875825002469A3 /* Favorites */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		E29C115C2C87691E002469A3 /* Target */ = {
+			isa = PBXGroup;
+			children = (
+				E29C115D2C876931002469A3 /* BooksTarget.swift */,
+			);
+			path = Target;
+			sourceTree = "<group>";
+		};
+		E29C115F2C87699E002469A3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				E29C11602C8769CB002469A3 /* BooksService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		E29C11622C876C5F002469A3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E29C11632C876CB8002469A3 /* OptionalExtensions.swift */,
+				E29C11762C885E37002469A3 /* UITabBar+SectionIndicator.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E29C11652C88535D002469A3 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				E29C11662C885369002469A3 /* DI */,
+				E29C11672C8853BA002469A3 /* TabBarViewController.swift */,
+				E29C116B2C885418002469A3 /* TabBarPresenter.swift */,
+				E29C11692C8853C7002469A3 /* TabBarInteractor.swift */,
+				E29C116D2C88546B002469A3 /* TabBarItem.swift */,
+				E29C116F2C885B15002469A3 /* TabBarProvider.swift */,
+			);
+			name = TabBar;
+			sourceTree = "<group>";
+		};
+		E29C11662C885369002469A3 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E29C11782C88636F002469A3 /* TabBarAssembly.swift */,
+				E29C117B2C886878002469A3 /* TabBarStoryboard.swift */,
+			);
+			name = DI;
+			sourceTree = "<group>";
+		};
+		E29C11732C885D70002469A3 /* AppNavigator */ = {
+			isa = PBXGroup;
+			children = (
+				E29C11742C885D8A002469A3 /* AppNavigationController.swift */,
+			);
+			path = AppNavigator;
+			sourceTree = "<group>";
+		};
+		E29C117A2C886774002469A3 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				E29C117F2C8868F0002469A3 /* DI */,
+				E29C11902C886C09002469A3 /* SettingsViewController.swift */,
+				E29C119A2C887155002469A3 /* SettingsInteractor.swift */,
+				E29C119C2C887160002469A3 /* SettingsPresenter.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
+		E29C117D2C8868D3002469A3 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E29C11822C886919002469A3 /* FavoritesAssembly.swift */,
+				E29C119E2C8877B6002469A3 /* FavoritesStoryboardId.swift */,
+				E29C11842C886929002469A3 /* FavoritesStoryboard.swift */,
+			);
+			path = DI;
+			sourceTree = "<group>";
+		};
+		E29C117F2C8868F0002469A3 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+				E29C11802C88690C002469A3 /* SettingsAssembly.swift */,
+				E29C11862C886935002469A3 /* SettingsStoryboard.swift */,
+			);
+			name = DI;
 			sourceTree = "<group>";
 		};
 		E2F3BE132C870ED200C86BA7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
+				E2F3BE302C87152400C86BA7 /* RootNavigatorProtocol.swift */,
 				E2F3BE142C870EE800C86BA7 /* Stroryboard.swift */,
 				E2F3BE162C870FA600C86BA7 /* AppError.swift */,
 				E2F3BE182C87103700C86BA7 /* NWPathMonitorProtocol.swift */,
@@ -374,7 +528,6 @@
 				E2F3BE202C87114400C86BA7 /* TopViewControllerProtocol.swift */,
 				E2F3BE222C87117100C86BA7 /* UIViewControllerRouting.swift */,
 				E2F3BE242C87128800C86BA7 /* NetworkObserverProtocol.swift */,
-				E2F3BE302C87152400C86BA7 /* RootNavigatorProtocol.swift */,
 				E24E43102C8725A5004199C2 /* ImageLoaderProtocol.swift */,
 			);
 			path = Protocols;
@@ -516,10 +669,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29C11722C885B82002469A3 /* TabBar.storyboard in Resources */,
 				E24E43232C874055004199C2 /* BookCell.xib in Resources */,
+				E29C118F2C886BD2002469A3 /* Favorites.storyboard in Resources */,
 				E250E2FC2C85EF5000962FDC /* LaunchScreen.storyboard in Resources */,
 				E250E2F92C85EF5000962FDC /* Assets.xcassets in Resources */,
 				E24E43082C871782004199C2 /* Home.storyboard in Resources */,
+				E29C11932C886C67002469A3 /* Settings.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -645,38 +801,62 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E29C11612C8769CB002469A3 /* BooksService.swift in Sources */,
+				E29C11872C886935002469A3 /* SettingsStoryboard.swift in Sources */,
+				E29C11792C88636F002469A3 /* TabBarAssembly.swift in Sources */,
 				E24E43112C8725A5004199C2 /* ImageLoaderProtocol.swift in Sources */,
 				E24E430F2C87242E004199C2 /* HomePresenter.swift in Sources */,
 				E29C11532C875835002469A3 /* BookResponse.swift in Sources */,
+				E29C11832C886919002469A3 /* FavoritesAssembly.swift in Sources */,
 				E2F3BE282C8712EC00C86BA7 /* ProviderError.swift in Sources */,
+				E29C119D2C887160002469A3 /* SettingsPresenter.swift in Sources */,
 				E2F3BE2C2C8713AB00C86BA7 /* Constants.swift in Sources */,
 				E24E43152C872AF9004199C2 /* Provider.swift in Sources */,
 				E2F3BE342C8715D900C86BA7 /* SharedAssembly.swift in Sources */,
 				E24E431E2C87305E004199C2 /* HomeAssembly.swift in Sources */,
 				E24E430D2C872408004199C2 /* HomeInteractor.swift in Sources */,
+				E29C11702C885B15002469A3 /* TabBarProvider.swift in Sources */,
+				E29C115E2C876931002469A3 /* BooksTarget.swift in Sources */,
 				E29C114B2C875452002469A3 /* BookCell.swift in Sources */,
 				E2F3BE2F2C8714C600C86BA7 /* RoundedView.swift in Sources */,
 				E2F3BE1B2C87106B00C86BA7 /* UIApplicationProtocol.swift in Sources */,
+				E29C116A2C8853C7002469A3 /* TabBarInteractor.swift in Sources */,
+				E29C11952C887134002469A3 /* FavoritesInteractor.swift in Sources */,
+				E29C11992C88714A002469A3 /* FavoritesRouter.swift in Sources */,
 				E250E2F42C85EF4F00962FDC /* HomeViewController.swift in Sources */,
+				E29C119F2C8877B6002469A3 /* FavoritesStoryboardId.swift in Sources */,
 				E2F3BE252C87128800C86BA7 /* NetworkObserverProtocol.swift in Sources */,
 				E2F3BE232C87117100C86BA7 /* UIViewControllerRouting.swift in Sources */,
 				E29C11582C875AC8002469A3 /* BooksModel.swift in Sources */,
+				E29C11912C886C09002469A3 /* SettingsViewController.swift in Sources */,
 				E29C115A2C875AED002469A3 /* BookModel.swift in Sources */,
+				E29C116C2C885418002469A3 /* TabBarPresenter.swift in Sources */,
+				E29C118D2C886B6D002469A3 /* FavoritesViewController.swift in Sources */,
+				E29C11642C876CB8002469A3 /* OptionalExtensions.swift in Sources */,
 				E2F3BE2A2C87134100C86BA7 /* ClientError.swift in Sources */,
+				E29C119B2C887155002469A3 /* SettingsInteractor.swift in Sources */,
 				E24E431A2C872F3C004199C2 /* HomeStoryboard.swift in Sources */,
 				E24E43202C8734E6004199C2 /* R.generated.swift in Sources */,
 				E2D2C7EF2C861E6600F8D573 /* BooksApp.swift in Sources */,
 				E24E43172C872DE9004199C2 /* HomeRouter.swift in Sources */,
+				E29C116E2C88546B002469A3 /* TabBarItem.swift in Sources */,
 				E2F3BE192C87103700C86BA7 /* NWPathMonitorProtocol.swift in Sources */,
 				E250E2F02C85EF4F00962FDC /* AppDelegate.swift in Sources */,
 				E24E431C2C872FDD004199C2 /* HomeStoryboardId.swift in Sources */,
 				E24E43132C8725D4004199C2 /* RoundedImageView.swift in Sources */,
+				E29C11812C88690C002469A3 /* SettingsAssembly.swift in Sources */,
 				E2F3BE152C870EE800C86BA7 /* Stroryboard.swift in Sources */,
 				E2F3BE212C87114400C86BA7 /* TopViewControllerProtocol.swift in Sources */,
+				E29C117C2C886878002469A3 /* TabBarStoryboard.swift in Sources */,
 				E29C114D2C875748002469A3 /* BooksDataSource.swift in Sources */,
+				E29C11682C8853BA002469A3 /* TabBarViewController.swift in Sources */,
+				E29C11772C885E37002469A3 /* UITabBar+SectionIndicator.swift in Sources */,
 				E29C11552C87595F002469A3 /* BooksResponse.swift in Sources */,
 				E2F3BE1F2C8710F000C86BA7 /* AlertPresenterProtocol.swift in Sources */,
+				E29C11852C886929002469A3 /* FavoritesStoryboard.swift in Sources */,
 				E2F3BE312C87152400C86BA7 /* RootNavigatorProtocol.swift in Sources */,
+				E29C11972C88713D002469A3 /* FavoritesPresenter.swift in Sources */,
+				E29C11752C885D8A002469A3 /* AppNavigationController.swift in Sources */,
 				E2F3BE1D2C8710AF00C86BA7 /* ErrorHandlerProtocol.swift in Sources */,
 				E2F3BE172C870FA600C86BA7 /* AppError.swift in Sources */,
 			);

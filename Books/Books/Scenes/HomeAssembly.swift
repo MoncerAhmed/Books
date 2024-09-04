@@ -24,13 +24,14 @@ class HomeAssembly: Assembly {
             let presenter = resolver ~> (HomePresenterProtocol.self)
             let router = resolver ~> (HomeRouterProtocol.self)
             let interactor = resolver ~> (HomeInteractorProtocol.self)
+            let imageLoader = resolver ~> (ImageLoaderProtocol.self)
 
             router.set(viewController: vc)
             presenter.set(viewController: vc)
 
-            vc.set(router: resolver ~> (HomeRouterProtocol.self))
+            vc.set(router: router)
             vc.set(interactor: interactor)
+            vc.set(imageLoader: imageLoader)
         }
-
     }
 }

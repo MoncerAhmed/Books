@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uFQ-eS-pK0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -18,10 +18,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hmd-hf-l6N">
-                                <rect key="frame" x="0.0" y="67" width="393" height="785"/>
+                                <rect key="frame" x="16" y="103" width="361" height="749"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search by author or book name" translatesAutoresizingMaskIntoConstraints="NO" id="mlK-E4-qbD">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="84.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="64"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -31,7 +31,7 @@
                                         </connections>
                                     </searchBar>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-EK-xfI">
-                                        <rect key="frame" x="0.0" y="92.333333333333314" width="393" height="692.66666666666674"/>
+                                        <rect key="frame" x="0.0" y="72" width="361" height="677"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="naK-ub-MTc">
                                             <size key="itemSize" width="128" height="128"/>
@@ -48,16 +48,40 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Hmd-hf-l6N" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" id="54e-F3-RCO"/>
+                            <constraint firstItem="Hmd-hf-l6N" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="54e-F3-RCO"/>
                             <constraint firstAttribute="bottom" secondItem="Hmd-hf-l6N" secondAttribute="bottom" id="HdU-oI-GK7"/>
-                            <constraint firstAttribute="trailing" secondItem="Hmd-hf-l6N" secondAttribute="trailing" id="Rmd-Jo-hCB"/>
-                            <constraint firstItem="Hmd-hf-l6N" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="8" id="ehg-jv-Z7f"/>
+                            <constraint firstAttribute="trailing" secondItem="Hmd-hf-l6N" secondAttribute="trailing" constant="16" id="Rmd-Jo-hCB"/>
+                            <constraint firstItem="Hmd-hf-l6N" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ehg-jv-Z7f"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="4KX-cJ-ygA"/>
+                    <connections>
+                        <outlet property="booksCollectionView" destination="Bek-EK-xfI" id="3N7-8Z-22u"/>
+                        <outlet property="searchBar" destination="mlK-E4-qbD" id="PND-aD-gzU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="70" y="-2"/>
+            <point key="canvasLocation" x="1922.9007633587785" y="-2.1126760563380285"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="dXG-bQ-5da">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="uFQ-eS-pK0" customClass="AppNavigationController" customModule="Books" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Mvy-G6-atY"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="NGd-MT-OvR">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Y6W-OH-hqX" kind="relationship" relationship="rootViewController" id="hJs-OK-LiO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VfX-Ow-ZHh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="996.18320610687022" y="-2.1126760563380285"/>
         </scene>
     </scenes>
     <resources>

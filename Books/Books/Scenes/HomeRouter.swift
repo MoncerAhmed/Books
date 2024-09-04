@@ -22,7 +22,6 @@ class HomeRouter: NSObject, HomeRouterProtocol{
     }
 
     enum Scene {
-        case home
         case details
     }
 
@@ -35,8 +34,6 @@ class HomeRouter: NSObject, HomeRouterProtocol{
         case .details:
             // TODO: change route with books details screen when implemented
             rootNavigator.setRootNavigator()
-        case .home:
-            rootNavigator.setHomeAsRoot()
         }
     }
 

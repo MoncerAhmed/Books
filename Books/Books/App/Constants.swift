@@ -9,6 +9,6 @@ import Foundation
 
 enum Constants {
     enum URLs {
-        static var apiURL = URL(string: "https://66d2def6184dce1713cea0c8.mockapi.io/appical/books/getBooks")
+        static var apiURL = URL(string: "https://66d2def6184dce1713cea0c8.mockapi.io/appical/books")
     }
 }

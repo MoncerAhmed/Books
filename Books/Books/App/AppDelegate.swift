@@ -10,7 +10,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    let baseApp = BooksApp()
+    private let baseApp = BooksApp()
     var window: UIWindow?
 
     func application(

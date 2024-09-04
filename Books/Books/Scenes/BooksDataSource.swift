@@ -31,9 +31,9 @@ class BooksDataSource: NSObject, UICollectionViewDataSource {
         guard let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: R.reuseIdentifier.bookCell,
             for: indexPath
-        ) as? BookCell else { return .init() }
-        
-        if let url = URL(string: books[indexPath.row].imageURL ?? "") {
+        ) as BookCell? else { return .init() }
+
+        if let url = URL(string: books[indexPath.row].imageURL.orEmptyString) {
             imageLoader?.loadImage(url: url,
                                    into: cell.bookImageView,
                                    placeholder: nil,

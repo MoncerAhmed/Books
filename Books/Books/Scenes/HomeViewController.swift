@@ -11,6 +11,7 @@ protocol HomeViewControllerProtocol: UIViewControllerRouting {
     func set(interactor: HomeInteractorProtocol)
     func set(router: HomeRouterProtocol)
     func set(imageLoader: ImageLoaderProtocol)
+    func refresh()
 }
 
 class HomeViewController: UIViewController, HomeViewControllerProtocol {
@@ -21,8 +22,9 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
     var booksDataSource = BooksDataSource()
 
     // MARK: Outlets
-
-
+    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var booksCollectionView: UICollectionView!
+    
     // MARK: View lifecycle
 
     override func viewDidLoad() {
@@ -52,8 +54,13 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
     }
 
     // MARK: Display
+
     func displayBooks() {
         // TODO: handle books display in collectionView
+    }
+
+    func refresh() {
+        // TODO: handle refresh view
     }
 }
 
