@@ -14,15 +14,18 @@ protocol HomeRouterProtocol {
 }
 
 class HomeRouter: NSObject, HomeRouterProtocol{
-    weak var viewController: HomeViewControllerProtocol?
-    private let rootNavigator: RootNavigatorProtocol
 
-    init(rootNavigator: RootNavigatorProtocol) {
-        self.rootNavigator = rootNavigator
+    // MARK: - Private
+    weak var viewController: HomeViewControllerProtocol?
+
+    private let detailsStoryboard: Storyboard
+
+    init(detailsStoryboard: Storyboard) {
+        self.detailsStoryboard = detailsStoryboard
     }
 
     enum Scene {
-        case details
+        case details(book: BookModel)
     }
 
     func set(viewController: HomeViewControllerProtocol) {
@@ -31,10 +34,12 @@ class HomeRouter: NSObject, HomeRouterProtocol{
 
     func route(to scene: HomeRouter.Scene) {
         switch scene {        
-        case .details:
-            // TODO: change route with books details screen when implemented
-            print("Routing to Details screen")
+        case .details(let book):
+            guard let vc = detailsStoryboard.viewController(identifier: HomeStoryboardId.details) as? BookDetailsViewController
+            else { return }
+            vc.setBook(with: book)
+            vc.modalPresentationStyle = .fullScreen
+            viewController?.present(vc, animated: true, completion: nil)
         }
     }
-
 }

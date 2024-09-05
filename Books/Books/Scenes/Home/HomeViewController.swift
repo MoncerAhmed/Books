@@ -54,7 +54,7 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
 
     // MARK: Setup
 
-    func setupUI() {
+    private func setupUI() {
         booksCollectionView.register(
             .init(nibName: R.nib.bookCell.identifier,
                   bundle: nil),
@@ -75,8 +75,8 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
 
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Handle routing to details with object when details screen is implemented
-        router?.route(to: .details)
+        let book = booksDataSource.item(at: indexPath.row)
+        router?.route(to: .details(book: book))
     }
 }
 

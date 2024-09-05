@@ -13,11 +13,14 @@ protocol HomeInteractorProtocol {
 }
 
 class HomeInteractor: HomeInteractorProtocol {
+
+    // MARK: - Private
+
     private var presenter: HomePresenterProtocol?
     private let booksService: BooksServiceProtocol
     private let errorHandler: ErrorHandlerProtocol
     private var anyCancellables: Set<AnyCancellable> = Set<AnyCancellable>()
-    var books: [BookResponse] = []
+    private var books: [BookResponse] = []
 
     init(
         presenter: HomePresenterProtocol,
