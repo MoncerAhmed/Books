@@ -26,6 +26,7 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
     var booksDataSource = BooksDataSource()
 
     // MARK: Outlets
+
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var booksCollectionView: UICollectionView!
     

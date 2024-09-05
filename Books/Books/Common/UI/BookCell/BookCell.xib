@@ -4,7 +4,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -48,18 +47,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                     </view>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZLR-A3-gs9">
-                        <rect key="frame" x="256" y="0.0" width="70" height="70"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="70" id="Oxk-xH-kTC"/>
-                            <constraint firstAttribute="height" constant="70" id="WxD-ux-O0u"/>
-                        </constraints>
-                        <color key="tintColor" systemColor="systemGreenColor"/>
-                        <state key="normal">
-                            <imageReference key="image" image="heart-inactive" symbolScale="large"/>
-                        </state>
-                    </button>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-nJ-jKt" customClass="RoundedView" customModule="EoF" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-nJ-jKt" customClass="RoundedView" customModule="Books" customModuleProvider="target">
                         <rect key="frame" x="18" y="149.33333333333334" width="299" height="74.666666666666657"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bmQ-L6-97Y">
@@ -102,8 +90,6 @@
                     <constraint firstItem="aNf-W0-I7h" firstAttribute="top" secondItem="TjD-Oe-fNj" secondAttribute="top" id="5JJ-6B-LGT"/>
                     <constraint firstAttribute="bottom" secondItem="aNf-W0-I7h" secondAttribute="bottom" id="82m-W4-qfh"/>
                     <constraint firstAttribute="trailing" secondItem="aNf-W0-I7h" secondAttribute="trailing" id="GON-TV-0kg"/>
-                    <constraint firstItem="ZLR-A3-gs9" firstAttribute="top" secondItem="TjD-Oe-fNj" secondAttribute="top" id="RZ8-Tr-x3K"/>
-                    <constraint firstAttribute="trailing" secondItem="ZLR-A3-gs9" secondAttribute="trailing" constant="9" id="VCQ-wt-kBV"/>
                     <constraint firstAttribute="bottom" secondItem="OhU-nJ-jKt" secondAttribute="bottom" constant="10" id="lyo-9y-TsS"/>
                     <constraint firstItem="aNf-W0-I7h" firstAttribute="leading" secondItem="TjD-Oe-fNj" secondAttribute="leading" id="tZV-fi-amn"/>
                 </constraints>
@@ -113,13 +99,11 @@
                 <outlet property="bookAuthorLabel" destination="YNB-0d-oYD" id="oHD-9T-qBV"/>
                 <outlet property="bookImageView" destination="PVw-SZ-PBo" id="Hde-le-UIL"/>
                 <outlet property="bookTitleLabel" destination="bou-lI-m7X" id="gN4-OG-3Ru"/>
-                <outlet property="favoritesButton" destination="ZLR-A3-gs9" id="Pqh-Na-rNk"/>
             </connections>
             <point key="canvasLocation" x="-495.41984732824426" y="-2.8169014084507045"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="heart-inactive" width="24" height="24"/>
         <namedColor name="label_primary">
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
@@ -127,13 +111,10 @@
             <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="tab-bar-background">
-            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
