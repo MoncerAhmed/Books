@@ -56,15 +56,9 @@ extension TabBarViewController {
                 assertionFailure()
                 return UIViewController()
             }
-            let tabBarItem = UITabBarItem(title: nil, image: $0.icon, tag: $0.tag)
+            let tabBarItem = UITabBarItem(title: $0.title, image: $0.icon, tag: $0.tag)
             vc.tabBarItem = tabBarItem
             return vc
         }
-
-        self.tabBar.selectionIndicatorImage = UIImage().createSelectionIndicator(
-            color: .black,
-            size: CGSize(width: 28, height: 36),
-            lineWidth: 3
-        )
     }
 }
