@@ -4,8 +4,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -19,10 +19,11 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="C5t-ot-XNr">
                                 <rect key="frame" x="52.666666666666657" y="294.66666666666669" width="288" height="288.00000000000006"/>
+                                <color key="backgroundColor" name="tab-bar-background"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="tab-bar-background"/>
                         <constraints>
                             <constraint firstItem="C5t-ot-XNr" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="h8g-4D-DDD"/>
                             <constraint firstItem="C5t-ot-XNr" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mTW-uk-e1c"/>
@@ -36,8 +37,8 @@
     </scenes>
     <resources>
         <image name="logo" width="288" height="288"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="tab-bar-background">
+            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
