@@ -73,6 +73,8 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
     }
 }
 
+// MARK: UICollectionViewDelegate
+
 extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let book = booksDataSource.item(at: indexPath.row)
@@ -80,12 +82,14 @@ extension HomeViewController: UICollectionViewDelegate {
     }
 }
 
+// MARK: UICollectionViewDelegateFlowLayout
+
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let collectionViewSize = collectionView.frame.size.width
-        let collectionHeightViewSize = collectionViewSize * 0.7
+        let collectionViewWidth = collectionView.frame.size.width
+        let collectionViewHeight = collectionViewWidth * 0.7
 
-        return CGSize(width: collectionViewSize, height: collectionHeightViewSize)
+        return CGSize(width: collectionViewWidth, height: collectionViewHeight)
     }
 
     func collectionView(_ collectionView: UICollectionView,
@@ -96,7 +100,11 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
     }
 
     // Distance Between Item Cells
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAt section: Int
+    ) -> CGFloat {
         32
     }
 }

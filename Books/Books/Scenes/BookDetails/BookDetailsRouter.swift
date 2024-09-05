@@ -27,7 +27,7 @@ class BookDetailsRouter: NSObject, BookDetailsRouterProtocol {
     func route(to scene: BookDetailsRouter.Scene) {
         switch scene {
         case .back:
-            viewController?.pop(animated: true)
+            viewController?.dismiss(animated: true, completion: nil)
         }
     }
 }

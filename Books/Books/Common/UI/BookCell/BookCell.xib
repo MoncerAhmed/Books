@@ -26,7 +26,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="335" height="234"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-W0-I7h" customClass="RoundedView" customModule="Books">
+                    <view userInteractionEnabled="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-W0-I7h" customClass="RoundedView" customModule="Books">
                         <rect key="frame" x="0.0" y="0.0" width="335" height="234"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PVw-SZ-PBo" userLabel="bookImageView">

@@ -9,6 +9,7 @@ import UIKit
 
 protocol BookDetailsPresenterProtocol {
     func set(viewController: BookDetailsViewControllerProtocol)
+    func present(book: BookModel)
 }
 
 class BookDetailsPresenter: BookDetailsPresenterProtocol {
@@ -19,5 +20,11 @@ class BookDetailsPresenter: BookDetailsPresenterProtocol {
 
     func set(viewController: BookDetailsViewControllerProtocol) {
         self.viewController = viewController
+    }
+
+    // MARK: Presentation
+
+    func present(book: BookModel) {
+        viewController?.displayDetails(with: book)
     }
 }
