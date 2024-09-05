@@ -16,9 +16,12 @@ class BookCell: UICollectionViewCell {
     @IBOutlet weak var favoritesButton: UIButton!
     
 
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
+
     func configure(with book: BookModel) {
         bookTitleLabel.text = book.title
         bookAuthorLabel.text = book.author
-        
     }
 }

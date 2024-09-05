@@ -10,7 +10,7 @@ import Moya
 
 //sourcery: AutoMockable
 protocol BooksServiceProtocol {
-    func getBooks() -> AnyPublisher< BooksResponse, ClientError>
+    func getBooks() -> AnyPublisher< [BookResponse], ClientError>
 }
 
 struct BooksService: BooksServiceProtocol {
@@ -20,7 +20,7 @@ struct BooksService: BooksServiceProtocol {
         self.client = client
     }
 
-    func getBooks() -> AnyPublisher<BooksResponse, ClientError> {
+    func getBooks() -> AnyPublisher<[BookResponse], ClientError> {
         client.request(.books)
             .mapError { error in
                 let defaultError = ClientError.unknownError

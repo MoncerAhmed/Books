@@ -11,10 +11,14 @@ protocol HomeViewControllerProtocol: UIViewControllerRouting {
     func set(interactor: HomeInteractorProtocol)
     func set(router: HomeRouterProtocol)
     func set(imageLoader: ImageLoaderProtocol)
-    func refresh()
+
+    func displayBooks(with books: [BookModel])
 }
 
 class HomeViewController: UIViewController, HomeViewControllerProtocol {
+
+    // MARK: Private
+
     private var interactor: HomeInteractorProtocol?
     private var router: HomeRouterProtocol?
     private var imageLoader: ImageLoaderProtocol?
@@ -29,8 +33,8 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        interactor?.handleViewDidLoad()
         setupUI()
+        interactor?.handleViewDidLoad()
     }
 
     // MARK: DI
@@ -50,18 +54,43 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
     // MARK: Setup
 
     func setupUI() {
-        // TODO: setup UI elements
+        booksCollectionView.register(
+            .init(nibName: R.nib.bookCell.identifier,
+                  bundle: nil),
+            forCellWithReuseIdentifier: R.reuseIdentifier.bookCell.identifier
+        )
+        booksDataSource.set(imageLoader: imageLoader)
+        booksCollectionView?.dataSource = booksDataSource
+        booksCollectionView?.delegate = self
     }
 
     // MARK: Display
 
-    func displayBooks() {
-        // TODO: handle books display in collectionView
-    }
-
-    func refresh() {
-        // TODO: handle refresh view
+    func displayBooks(with books: [BookModel]) {
+        booksDataSource.set(books: books)
+        booksCollectionView.reloadData()
     }
 }
 
+extension HomeViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Handle routing to details with object when details screen is implemented
+        router?.route(to: .details)
+    }
+}
 
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewSize = collectionView.frame.size.width
+        let collectionHeightViewSize = collectionViewSize * 0.7
+
+        return CGSize(width: collectionViewSize, height: collectionHeightViewSize)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+}

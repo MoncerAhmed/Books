@@ -33,5 +33,11 @@ class HomeAssembly: Assembly {
             vc.set(interactor: interactor)
             vc.set(imageLoader: imageLoader)
         }
+
+        // MARK: - Books  service
+        container.register(BooksServiceProtocol.self) { resolver in
+            return BooksService(client: MoyaClient<BooksTarget>(
+                networkObserver: resolver ~> (NetworkObserverProtocol.self)))
+        }
     }
 }

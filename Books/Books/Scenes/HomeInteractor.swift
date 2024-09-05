@@ -14,14 +14,34 @@ protocol HomeInteractorProtocol {
 
 class HomeInteractor: HomeInteractorProtocol {
     private var presenter: HomePresenterProtocol?
-
+    private let booksService: BooksServiceProtocol
+    private let errorHandler: ErrorHandlerProtocol
     private var anyCancellables: Set<AnyCancellable> = Set<AnyCancellable>()
+    var books: [BookResponse] = []
 
-    init(presenter: HomePresenterProtocol) {
+    init(
+        presenter: HomePresenterProtocol,
+        booksService: BooksServiceProtocol,
+        errorHandler: ErrorHandlerProtocol
+    ) {
         self.presenter = presenter
+        self.booksService = booksService
+        self.errorHandler = errorHandler
     }
 
     func handleViewDidLoad() {
-       // TODO: make API call to retrieve books
+        booksService.getBooks()
+            .sink(receiveCompletion: {[weak self, errorHandler] completion in
+                guard let self = self else { return assertionFailure() }
+                switch completion {
+                case .failure(let error):
+                    errorHandler.handle(error)
+                case .finished:
+                    presenter?.presentBooks(books: self.books)
+                }
+            }, receiveValue: { response in
+                self.books = response
+            })
+            .store(in: &anyCancellables)
     }
 }

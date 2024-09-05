@@ -12,9 +12,7 @@ protocol TabBarViewControllerProtocol: UIViewControllerRouting {
     func set(interactor: TabBarInteractorProtocol)
     func setupTabbar(items: [TabBarItemViewModel])
     func select(index: Int)
-    func refresh()
 
-    //    var selectedIndex: Int { get }
     var viewControllers: [UIViewController]? { get }
 }
 
@@ -68,14 +66,5 @@ extension TabBarViewController {
             size: CGSize(width: 28, height: 36),
             lineWidth: 3
         )
-    }
-
-    func refresh() {
-        viewControllers?.forEach({
-            guard let nav = $0 as? AppNavigationController else { return }
-            if let home = nav.topViewController as? HomeViewController {
-                home.refresh()
-            }
-        })
     }
 }

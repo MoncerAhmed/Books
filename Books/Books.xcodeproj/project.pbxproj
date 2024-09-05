@@ -31,8 +31,6 @@
 		E29C114B2C875452002469A3 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C114A2C875452002469A3 /* BookCell.swift */; };
 		E29C114D2C875748002469A3 /* BooksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C114C2C875748002469A3 /* BooksDataSource.swift */; };
 		E29C11532C875835002469A3 /* BookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11522C875835002469A3 /* BookResponse.swift */; };
-		E29C11552C87595F002469A3 /* BooksResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11542C87595F002469A3 /* BooksResponse.swift */; };
-		E29C11582C875AC8002469A3 /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11572C875AC8002469A3 /* BooksModel.swift */; };
 		E29C115A2C875AED002469A3 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11592C875AED002469A3 /* BookModel.swift */; };
 		E29C115E2C876931002469A3 /* BooksTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C115D2C876931002469A3 /* BooksTarget.swift */; };
 		E29C11612C8769CB002469A3 /* BooksService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11602C8769CB002469A3 /* BooksService.swift */; };
@@ -123,8 +121,6 @@
 		E29C114A2C875452002469A3 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		E29C114C2C875748002469A3 /* BooksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksDataSource.swift; sourceTree = "<group>"; };
 		E29C11522C875835002469A3 /* BookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResponse.swift; sourceTree = "<group>"; };
-		E29C11542C87595F002469A3 /* BooksResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksResponse.swift; sourceTree = "<group>"; };
-		E29C11572C875AC8002469A3 /* BooksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
 		E29C11592C875AED002469A3 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		E29C115D2C876931002469A3 /* BooksTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksTarget.swift; sourceTree = "<group>"; };
 		E29C11602C8769CB002469A3 /* BooksService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksService.swift; sourceTree = "<group>"; };
@@ -386,7 +382,6 @@
 			isa = PBXGroup;
 			children = (
 				E29C11522C875835002469A3 /* BookResponse.swift */,
-				E29C11542C87595F002469A3 /* BooksResponse.swift */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -401,7 +396,6 @@
 		E29C11562C875AA6002469A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				E29C11572C875AC8002469A3 /* BooksModel.swift */,
 				E29C11592C875AED002469A3 /* BookModel.swift */,
 			);
 			path = Models;
@@ -790,7 +784,6 @@
 				E29C119F2C8877B6002469A3 /* FavoritesStoryboardId.swift in Sources */,
 				E2F3BE252C87128800C86BA7 /* NetworkObserverProtocol.swift in Sources */,
 				E2F3BE232C87117100C86BA7 /* UIViewControllerRouting.swift in Sources */,
-				E29C11582C875AC8002469A3 /* BooksModel.swift in Sources */,
 				E29C115A2C875AED002469A3 /* BookModel.swift in Sources */,
 				E29C116C2C885418002469A3 /* TabBarPresenter.swift in Sources */,
 				E29C118D2C886B6D002469A3 /* FavoritesViewController.swift in Sources */,
@@ -811,7 +804,6 @@
 				E29C114D2C875748002469A3 /* BooksDataSource.swift in Sources */,
 				E29C11682C8853BA002469A3 /* TabBarViewController.swift in Sources */,
 				E29C11772C885E37002469A3 /* UITabBar+SectionIndicator.swift in Sources */,
-				E29C11552C87595F002469A3 /* BooksResponse.swift in Sources */,
 				E2F3BE1F2C8710F000C86BA7 /* AlertPresenterProtocol.swift in Sources */,
 				E29C11852C886929002469A3 /* FavoritesStoryboard.swift in Sources */,
 				E2F3BE312C87152400C86BA7 /* RootNavigatorProtocol.swift in Sources */,

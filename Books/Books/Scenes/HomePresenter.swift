@@ -9,6 +9,7 @@ import UIKit
 
 protocol HomePresenterProtocol {
     func set(viewController: HomeViewControllerProtocol)
+    func presentBooks(books: [BookResponse])
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -18,5 +19,22 @@ class HomePresenter: HomePresenterProtocol {
 
     func set(viewController: HomeViewControllerProtocol) {
         self.viewController = viewController
+    }
+
+
+    // MARK: Presentation
+
+    func presentBooks(books: [BookResponse]) {
+        var booksModel: [BookModel] = []
+        books.forEach {
+            let bookModel = BookModel(id: $0.id,
+                                      title: $0.title,
+                                      author: $0.author,
+                                      imageURL: $0.imageURL,
+                                      description: $0.description,
+                                      isFavorite: false)
+            booksModel.append(bookModel)
+        }
+        viewController?.displayBooks(with: booksModel)
     }
 }
