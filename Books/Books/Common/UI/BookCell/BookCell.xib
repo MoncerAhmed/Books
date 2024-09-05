@@ -33,9 +33,6 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="PVw-SZ-PBo" userLabel="bookImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="335" height="207"/>
                                 <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -60,9 +57,6 @@
                         <state key="normal">
                             <imageReference key="image" image="heart-inactive" symbolScale="large"/>
                         </state>
-                        <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                        </userDefinedRuntimeAttributes>
                     </button>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-nJ-jKt" customClass="RoundedView" customModule="EoF" customModuleProvider="target">
                         <rect key="frame" x="18" y="122.33333333333331" width="299" height="74.666666666666686"/>
@@ -83,9 +77,6 @@
                                     </label>
                                 </subviews>
                                 <color key="tintColor" systemColor="systemBlueColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="NO"/>
-                                </userDefinedRuntimeAttributes>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -99,7 +90,6 @@
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <real key="value" value="20"/>
                             </userDefinedRuntimeAttribute>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
@@ -114,9 +104,6 @@
                     <constraint firstAttribute="bottom" secondItem="OhU-nJ-jKt" secondAttribute="bottom" constant="10" id="lyo-9y-TsS"/>
                     <constraint firstItem="aNf-W0-I7h" firstAttribute="leading" secondItem="TjD-Oe-fNj" secondAttribute="leading" id="tZV-fi-amn"/>
                 </constraints>
-                <userDefinedRuntimeAttributes>
-                    <userDefinedRuntimeAttribute type="boolean" keyPath="isSkeletonable" value="YES"/>
-                </userDefinedRuntimeAttributes>
             </collectionViewCellContentView>
             <connections>
                 <outlet property="bookAuthorLabel" destination="YNB-0d-oYD" id="oHD-9T-qBV"/>

@@ -33,7 +33,7 @@ class HomeRouter: NSObject, HomeRouterProtocol{
         switch scene {        
         case .details:
             // TODO: change route with books details screen when implemented
-            rootNavigator.setRootNavigator()
+            print("Routing to Details screen")
         }
     }
 
