@@ -75,6 +75,21 @@
             </objects>
             <point key="canvasLocation" x="1922.9007633587785" y="-2.1126760563380285"/>
         </scene>
+        <!--Book Details View Controller-->
+        <scene sceneID="zzV-LC-gkl">
+            <objects>
+                <viewController storyboardIdentifier="BookDetailsViewController" id="yrK-MD-Ial" customClass="BookDetailsViewController" customModule="Books" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ebG-IW-VnK">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="uZz-J3-zLB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJc-Xn-iIU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2791.6030534351144" y="-2.1126760563380285"/>
+        </scene>
         <!--Item-->
         <scene sceneID="dXG-bQ-5da">
             <objects>
@@ -97,8 +112,11 @@
     </scenes>
     <resources>
         <namedColor name="tab-bar-background">
-            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

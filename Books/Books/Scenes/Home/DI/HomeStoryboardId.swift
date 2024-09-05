@@ -14,8 +14,7 @@ enum HomeStoryboardId: StoryboardId {
     var identifier: String {
         switch self {
         case .details:
-            // TODO: replace home with details identifier after creating the details screen
-            return R.storyboard.home.homeViewController.identifier
+            return R.storyboard.home.bookDetailsViewController.identifier
         }
     }
 }

@@ -20,6 +20,10 @@ class BooksDataSource: NSObject, UICollectionViewDataSource {
         self.imageLoader = imageLoader
     }
 
+    func item(at index: Int) -> BookModel {
+        return books[index]
+    }
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         books.count
     }
