@@ -61,10 +61,5 @@ class SharedAssembly: Assembly {
         container.register(Storyboard.self, name: R.storyboard.favorites.name) { _ in
             return FavoritesStoryboard(sharedContainer: container, assembly: FavoritesAssembly())
         }
-
-        // MARK: - Settings
-        container.register(Storyboard.self, name: R.storyboard.settings.name) { _ in
-            return SettingsStoryboard(sharedContainer: container, assembly: SettingsAssembly())
-        }
     }
 }
