@@ -16,9 +16,9 @@ enum TabBarItem: Equatable, CaseIterable {
     var icon: UIImage {
         switch self {
         case .home:
-            return R.image.houseInactive()!
+            return R.image.bookActive()!
         case .favorites:
-            return R.image.heartInactive()!
+            return R.image.bookmark()!
         }
     }
 
