@@ -93,4 +93,9 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout {
 
         return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
     }
+
+    // Distance Between Item Cells
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        32
+    }
 }
