@@ -17,16 +17,13 @@ class TabBarViewModelProvider: TabBarViewModelProviderProtocol {
 
     private let homeStoryboard: Storyboard
     private let favoritesStoryboard: Storyboard
-    private let settingsStoryboard: Storyboard
 
     init(
         homeStoryboard: Storyboard,
-        favoritesStoryboard: Storyboard,
-        settingsStoryboard: Storyboard
+        favoritesStoryboard: Storyboard
     ) {
         self.homeStoryboard = homeStoryboard
         self.favoritesStoryboard = favoritesStoryboard
-        self.settingsStoryboard = settingsStoryboard
     }
 
     func viewModel(for item: TabBarItem) -> TabBarItemViewModel {
@@ -34,7 +31,6 @@ class TabBarViewModelProvider: TabBarViewModelProviderProtocol {
         switch item {
         case .home: storyboard = homeStoryboard
         case .favorites: storyboard = favoritesStoryboard
-        case .settings: storyboard = settingsStoryboard
         }
 
         return TabBarItemViewModel(

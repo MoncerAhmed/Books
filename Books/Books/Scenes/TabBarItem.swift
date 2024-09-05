@@ -12,7 +12,6 @@ enum TabBarItem: Equatable, CaseIterable {
 
     case home
     case favorites
-    case settings
 
     var icon: UIImage {
         switch self {
@@ -20,8 +19,6 @@ enum TabBarItem: Equatable, CaseIterable {
             return R.image.houseInactive()!
         case .favorites:
             return R.image.heartInactive()!
-        case .settings:
-            return R.image.settingsInactive()!
         }
     }
 
@@ -31,8 +28,6 @@ enum TabBarItem: Equatable, CaseIterable {
             return R.image.houseActive()!
         case .favorites:
             return R.image.heartActive()!
-        case .settings:
-            return R.image.settingsActive()!
         }
     }
 
@@ -42,8 +37,6 @@ enum TabBarItem: Equatable, CaseIterable {
             return "Home"
         case .favorites:
             return "Favorites"
-        case .settings:
-            return "Settings"
         }
     }
 
@@ -53,8 +46,6 @@ enum TabBarItem: Equatable, CaseIterable {
             return 0
         case .favorites:
             return 1
-        case .settings:
-            return 2
         }
     }
 }

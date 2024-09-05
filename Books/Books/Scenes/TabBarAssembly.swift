@@ -30,8 +30,7 @@ class TabBarAssembly: Assembly {
         container.register(TabBarViewModelProviderProtocol.self) { resolver in
             return TabBarViewModelProvider(
                 homeStoryboard: resolver ~> (Storyboard.self, name: R.storyboard.home.name),
-                favoritesStoryboard: resolver ~> (Storyboard.self, name: R.storyboard.favorites.name),
-                settingsStoryboard: resolver ~> (Storyboard.self, name: R.storyboard.settings.name)
+                favoritesStoryboard: resolver ~> (Storyboard.self, name: R.storyboard.favorites.name)
             )
         }
     }
