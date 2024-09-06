@@ -76,7 +76,7 @@ class BookDetailsViewController: UIViewController, BookDetailsViewControllerProt
         bookTitle.text = book.title
         bookAuthor.text = book.author
         bookDescription.text = book.description
-        if let imageURL = URL(string: book.imageURL.orEmptyString) {
+        if let imageURL = URL(string: book.imageURL) {
             imageLoader?.loadImage(
                 url: imageURL,
                 into: bookImageView,

@@ -30,7 +30,7 @@ class HomePresenter: HomePresenterProtocol {
             let bookModel = BookModel(id: $0.id,
                                       title: $0.title,
                                       author: $0.author,
-                                      imageURL: $0.imageURL,
+                                      imageURL: $0.imageURL.orEmptyString,
                                       description: $0.description,
                                       isFavorite: false)
             booksModel.append(bookModel)

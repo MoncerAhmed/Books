@@ -48,7 +48,7 @@ class BooksDataSource: NSObject, UICollectionViewDataSource {
             for: indexPath
         ) as BookCell? else { return .init() }
 
-        if let url = URL(string: books[indexPath.row].imageURL.orEmptyString) {
+        if let url = URL(string: books[indexPath.row].imageURL) {
             imageLoader?.loadImage(url: url,
                                    into: cell.bookImageView,
                                    placeholder: nil,
