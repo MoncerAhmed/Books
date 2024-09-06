@@ -11,7 +11,7 @@ struct BookModel {
     let id: String
     let title: String
     let author: String
-    let imageURL: String?
+    let imageURL: String
     let description: String
-    var isFavorite: Bool? = false
+    var isFavorite: Bool
 }
