@@ -10,6 +10,7 @@ import UIKit
 protocol BookDetailsPresenterProtocol {
     func set(viewController: BookDetailsViewControllerProtocol)
     func present(book: BookModel)
+    func presentFavoriteButton(isFavorite: Bool)
 }
 
 class BookDetailsPresenter: BookDetailsPresenterProtocol {
@@ -26,5 +27,9 @@ class BookDetailsPresenter: BookDetailsPresenterProtocol {
 
     func present(book: BookModel) {
         viewController?.displayDetails(with: book)
+    }
+
+    func presentFavoriteButton(isFavorite: Bool) {
+        viewController?.displayFavoriteButton(with: isFavorite)
     }
 }

@@ -14,6 +14,7 @@ protocol BookDetailsViewControllerProtocol: UIViewControllerRouting {
 
     func setBook(with book: BookModel)
     func displayDetails(with book: BookModel)
+    func displayFavoriteButton(with isFavorite: Bool)
 }
 
 class BookDetailsViewController: UIViewController, BookDetailsViewControllerProtocol {
@@ -27,6 +28,7 @@ class BookDetailsViewController: UIViewController, BookDetailsViewControllerProt
 
     // MARK: Outlets
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var favoritesButton: UIButton!
     @IBOutlet weak var bookImageView: RoundedImageView!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
@@ -87,5 +89,13 @@ class BookDetailsViewController: UIViewController, BookDetailsViewControllerProt
     @IBAction func backButtonTapped(_ sender: Any) {
         router?.route(to: .back)
     }
-    
+
+    @IBAction func favoriteButtonTapped(_ sender: Any) {
+        interactor?.handleFavoriteButtonTapped()
+    }
+
+    func displayFavoriteButton(with isFavorite: Bool) {
+        let favoriteImage: UIImage? = isFavorite ? R.image.heartActive() : R.image.heartInactive()
+        favoritesButton.setImage(favoriteImage, for: .normal)
+    }
 }

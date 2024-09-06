@@ -94,7 +94,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="oxg-V4-IA0"/>
                                                 </constraints>
-                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="back-arrow">
                                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
@@ -110,13 +110,18 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRk-UJ-Il5">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zej-0f-5mW">
                                                 <rect key="frame" x="327" y="0.0" width="50" height="40"/>
-                                                <color key="backgroundColor" name="tab-bar-background"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="50" id="b9I-jU-lcz"/>
+                                                    <constraint firstAttribute="width" constant="50" id="3MM-BN-kBd"/>
                                                 </constraints>
-                                            </view>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="heart-inactive"/>
+                                                <connections>
+                                                    <action selector="favoriteButtonTapped:" destination="yrK-MD-Ial" eventType="touchUpInside" id="PSa-rY-MEu"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" name="tab-bar-background"/>
                                         <constraints>
@@ -191,6 +196,7 @@
                         <outlet property="bookDescription" destination="11A-zU-wng" id="hFB-eB-OQI"/>
                         <outlet property="bookImageView" destination="Si1-vG-jwo" id="N8D-19-spS"/>
                         <outlet property="bookTitle" destination="ciY-FE-lBW" id="SLy-uQ-in5"/>
+                        <outlet property="favoritesButton" destination="zej-0f-5mW" id="nrH-gd-j7I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJc-Xn-iIU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -219,6 +225,7 @@
     </scenes>
     <resources>
         <image name="back-arrow" width="24" height="24"/>
+        <image name="heart-inactive" width="24" height="24"/>
         <namedColor name="tab-bar-background">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
