@@ -15,6 +15,7 @@ protocol BookDetailsInteractorProtocol {
 
 class BookDetailsInteractor: BookDetailsInteractorProtocol {
     private var presenter: BookDetailsPresenterProtocol?
+
     private var book: BookModel?
 
     init(

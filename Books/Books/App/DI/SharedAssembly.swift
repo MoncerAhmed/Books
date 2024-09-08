@@ -5,17 +5,38 @@
 //  Created by Ahmed Moncer on 03/09/2024.
 //
 
-import Foundation
-import UIKit
+import CoreData
+import Moya
+import Network
 import Swinject
 import SwinjectAutoregistration
-import Network
+import UIKit
 
 class SharedAssembly: Assembly {
     let sharedContainer = Container(defaultObjectScope: .container)
 
     //swiftlint:disable:next function_body_length
     func assemble(container: Container) {
+
+        // MARK: - Core Data Container
+        container.register(NSPersistentContainerProtocl.self) { _ in
+            lazy var container = NSPersistentContainer(name: "Offline")
+            container.loadPersistentStores { _, error in
+                if let error = error as NSError? {
+                    fatalError("Unresolved error \(error), \(error.userInfo)")
+                }
+            }
+            container.viewContext.mergePolicy = NSMergeByPropertyStoreTrumpMergePolicy
+            return container
+        }.inObjectScope(.container)
+
+        // MARK: - DBHandlerProtocol
+        container.register(DBHandlerProtocol.self) {
+            return CoreDataHandler.init(container: $0 ~> (NSPersistentContainerProtocl.self))
+        }.inObjectScope(.container)
+
+        container.autoregister(LocalDataBaseManagerProtocol.self, initializer: LocalDataBaseManager.init)
+            .inObjectScope(.container)
 
         // MARK: - NetworkObserverProtocol
         container.register(NetworkObserverProtocol.self) { _ in

@@ -12,7 +12,7 @@ protocol FavoritesViewControllerProtocol: UIViewControllerRouting {
     func set(interactor: FavoritesInteractorProtocol)
     func set(router: FavoritesRouterProtocol)
     func set(imageLoader: ImageLoaderProtocol)
-    func display(favorites: [String])
+    func display(favorites: [BookModel])
 }
 
 class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol {
@@ -29,14 +29,12 @@ class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        interactor?.handleViewDidLoad()
         setUpUI()
+        interactor?.handleViewDidLoad()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         navigationController?.setNavigationBarHidden(true, animated: false)
     }
 
@@ -56,8 +54,10 @@ class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol
 
     // MARK: Display Favorites
 
-    func display(favorites: [String]) {
-        // TODO: dispaly favorites
+    func display(favorites: [BookModel]) {
+        favorites.forEach {
+            print("zou fav is: ", $0.id)
+        }
     }
 }
 

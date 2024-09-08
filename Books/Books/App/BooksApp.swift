@@ -17,7 +17,6 @@ protocol BaseAppProtocol {
 class BooksApp: NSObject, BaseAppProtocol {
     private let rootNavigator: RootNavigatorProtocol
     private let application: UIApplicationProtocol
-
     private let networkObserver: NetworkObserverProtocol
 
     init(rootNavigator: RootNavigatorProtocol,

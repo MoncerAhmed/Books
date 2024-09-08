@@ -11,7 +11,7 @@ import UIKit
 protocol FavoritesPresenterProtocol {
     func set(viewController: FavoritesViewControllerProtocol)
 
-    func present(favorites: [String])
+    func present(favorites: [BookModel])
 }
 
 class FavoritesPresenter: FavoritesPresenterProtocol {
@@ -26,8 +26,8 @@ class FavoritesPresenter: FavoritesPresenterProtocol {
         self.viewController = viewController
     }
 
-    func present(favorites: [String]) {
+    func present(favorites: [BookModel]) {
         // TODO: change type to array of favorites
-        viewController?.display(favorites: [""])
+        viewController?.display(favorites: favorites)
     }
 }

@@ -21,6 +21,15 @@
 		E250E3072C85EF5000962FDC /* BooksTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E250E3062C85EF5000962FDC /* BooksTests.swift */; };
 		E250E3112C85EF5000962FDC /* BooksUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E250E3102C85EF5000962FDC /* BooksUITests.swift */; };
 		E250E3132C85EF5000962FDC /* BooksUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E250E3122C85EF5000962FDC /* BooksUITestsLaunchTests.swift */; };
+		E252DF632C8B16CD001D3DFB /* DBHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252DF622C8B16CD001D3DFB /* DBHandlerProtocol.swift */; };
+		E252DF672C8B17F9001D3DFB /* NSPersistentContainerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252DF662C8B17F9001D3DFB /* NSPersistentContainerProtocol.swift */; };
+		E252DF692C8B18F6001D3DFB /* CoreDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252DF682C8B18F6001D3DFB /* CoreDataError.swift */; };
+		E252DF6B2C8B1922001D3DFB /* CoreDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252DF6A2C8B1922001D3DFB /* CoreDataRepository.swift */; };
+		E252DF6E2C8B19AA001D3DFB /* MicroLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252DF6D2C8B19AA001D3DFB /* MicroLogger.swift */; };
+		E252DF702C8B4071001D3DFB /* BooksCD+Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252DF6F2C8B4071001D3DFB /* BooksCD+Properties.swift */; };
+		E252DF752C8B4278001D3DFB /* LocalDataBaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252DF742C8B4278001D3DFB /* LocalDataBaseManager.swift */; };
+		E252DF792C8B523B001D3DFB /* CoreDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252DF782C8B523B001D3DFB /* CoreDataHandler.swift */; };
+		E252DF7B2C8E1E3B001D3DFB /* BooksCD+Class.swift in Sources */ = {isa = PBXBuildFile; fileRef = E252DF7A2C8E1E3B001D3DFB /* BooksCD+Class.swift */; };
 		E29C114B2C875452002469A3 /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C114A2C875452002469A3 /* BookCell.swift */; };
 		E29C11532C875835002469A3 /* BookResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11522C875835002469A3 /* BookResponse.swift */; };
 		E29C115A2C875AED002469A3 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11592C875AED002469A3 /* BookModel.swift */; };
@@ -57,6 +66,7 @@
 		E29C11D42C89F3D8002469A3 /* BookDetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11D32C89F3D8002469A3 /* BookDetailsInteractor.swift */; };
 		E29C11D62C89F3E5002469A3 /* BookDetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11D52C89F3E5002469A3 /* BookDetailsPresenter.swift */; };
 		E29C11D82C89F418002469A3 /* BookDetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E29C11D72C89F418002469A3 /* BookDetailsRouter.swift */; };
+		E29C11DE2C8B0C25002469A3 /* Offline.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E29C11DC2C8B0C24002469A3 /* Offline.xcdatamodeld */; };
 		E2D2C7EF2C861E6600F8D573 /* BooksApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2D2C7EE2C861E6600F8D573 /* BooksApp.swift */; };
 		E2F3BE152C870EE800C86BA7 /* Stroryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3BE142C870EE800C86BA7 /* Stroryboard.swift */; };
 		E2F3BE172C870FA600C86BA7 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F3BE162C870FA600C86BA7 /* AppError.swift */; };
@@ -115,6 +125,15 @@
 		E250E30C2C85EF5000962FDC /* BooksUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BooksUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E250E3102C85EF5000962FDC /* BooksUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksUITests.swift; sourceTree = "<group>"; };
 		E250E3122C85EF5000962FDC /* BooksUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E252DF622C8B16CD001D3DFB /* DBHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBHandlerProtocol.swift; sourceTree = "<group>"; };
+		E252DF662C8B17F9001D3DFB /* NSPersistentContainerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSPersistentContainerProtocol.swift; sourceTree = "<group>"; };
+		E252DF682C8B18F6001D3DFB /* CoreDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataError.swift; sourceTree = "<group>"; };
+		E252DF6A2C8B1922001D3DFB /* CoreDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRepository.swift; sourceTree = "<group>"; };
+		E252DF6D2C8B19AA001D3DFB /* MicroLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroLogger.swift; sourceTree = "<group>"; };
+		E252DF6F2C8B4071001D3DFB /* BooksCD+Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BooksCD+Properties.swift"; sourceTree = "<group>"; };
+		E252DF742C8B4278001D3DFB /* LocalDataBaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataBaseManager.swift; sourceTree = "<group>"; };
+		E252DF782C8B523B001D3DFB /* CoreDataHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHandler.swift; sourceTree = "<group>"; };
+		E252DF7A2C8E1E3B001D3DFB /* BooksCD+Class.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BooksCD+Class.swift"; sourceTree = "<group>"; };
 		E29C114A2C875452002469A3 /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		E29C11522C875835002469A3 /* BookResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookResponse.swift; sourceTree = "<group>"; };
 		E29C11592C875AED002469A3 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
@@ -153,6 +172,7 @@
 		E29C11D32C89F3D8002469A3 /* BookDetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsInteractor.swift; sourceTree = "<group>"; };
 		E29C11D52C89F3E5002469A3 /* BookDetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsPresenter.swift; sourceTree = "<group>"; };
 		E29C11D72C89F418002469A3 /* BookDetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsRouter.swift; sourceTree = "<group>"; };
+		E29C11DD2C8B0C24002469A3 /* Offline.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Offline.xcdatamodel; sourceTree = "<group>"; };
 		E2D2C7EE2C861E6600F8D573 /* BooksApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksApp.swift; sourceTree = "<group>"; };
 		E2F3BE142C870EE800C86BA7 /* Stroryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stroryboard.swift; sourceTree = "<group>"; };
 		E2F3BE162C870FA600C86BA7 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
@@ -300,6 +320,23 @@
 			path = BooksUITests;
 			sourceTree = "<group>";
 		};
+		E252DF6C2C8B1995001D3DFB /* MicroLogger */ = {
+			isa = PBXGroup;
+			children = (
+				E252DF6D2C8B19AA001D3DFB /* MicroLogger.swift */,
+			);
+			path = MicroLogger;
+			sourceTree = "<group>";
+		};
+		E252DF732C8B4266001D3DFB /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				E252DF742C8B4278001D3DFB /* LocalDataBaseManager.swift */,
+				E252DF782C8B523B001D3DFB /* CoreDataHandler.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		E256AAEB2C85F41D00F669F3 /* App */ = {
 			isa = PBXGroup;
 			children = (
@@ -315,6 +352,8 @@
 		E28CDBBF2C85EFC70066E37F /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				E252DF6C2C8B1995001D3DFB /* MicroLogger */,
+				E29C11DB2C8B0BCF002469A3 /* CoreData */,
 				E29C11732C885D70002469A3 /* AppNavigator */,
 				E29C11622C876C5F002469A3 /* Extensions */,
 				E29C114F2C875811002469A3 /* Network */,
@@ -400,13 +439,6 @@
 			path = Books;
 			sourceTree = "<group>";
 		};
-		E29C11512C875825002469A3 /* Favorites */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Favorites;
-			sourceTree = "<group>";
-		};
 		E29C11562C875AA6002469A3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -419,7 +451,6 @@
 			isa = PBXGroup;
 			children = (
 				E29C11502C875819002469A3 /* Books */,
-				E29C11512C875825002469A3 /* Favorites */,
 			);
 			path = Response;
 			sourceTree = "<group>";
@@ -491,6 +522,18 @@
 			name = DI;
 			sourceTree = "<group>";
 		};
+		E29C11DB2C8B0BCF002469A3 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				E29C11DC2C8B0C24002469A3 /* Offline.xcdatamodeld */,
+				E252DF6A2C8B1922001D3DFB /* CoreDataRepository.swift */,
+				E252DF6F2C8B4071001D3DFB /* BooksCD+Properties.swift */,
+				E252DF7A2C8E1E3B001D3DFB /* BooksCD+Class.swift */,
+				E252DF732C8B4266001D3DFB /* Manager */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		E2F3BE132C870ED200C86BA7 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -505,6 +548,8 @@
 				E2F3BE222C87117100C86BA7 /* UIViewControllerRouting.swift */,
 				E2F3BE242C87128800C86BA7 /* NetworkObserverProtocol.swift */,
 				E24E43102C8725A5004199C2 /* ImageLoaderProtocol.swift */,
+				E252DF622C8B16CD001D3DFB /* DBHandlerProtocol.swift */,
+				E252DF662C8B17F9001D3DFB /* NSPersistentContainerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -514,6 +559,7 @@
 			children = (
 				E2F3BE272C8712EC00C86BA7 /* ProviderError.swift */,
 				E2F3BE292C87134100C86BA7 /* ClientError.swift */,
+				E252DF682C8B18F6001D3DFB /* CoreDataError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -781,6 +827,7 @@
 				E29C11D22C89F378002469A3 /* BookDetailsViewController.swift in Sources */,
 				E29C11612C8769CB002469A3 /* BooksService.swift in Sources */,
 				E29C11C52C89DE76002469A3 /* FavoritesPresenter.swift in Sources */,
+				E252DF672C8B17F9001D3DFB /* NSPersistentContainerProtocol.swift in Sources */,
 				E29C11BD2C89DE47002469A3 /* HomeViewController.swift in Sources */,
 				E24E43112C8725A5004199C2 /* ImageLoaderProtocol.swift in Sources */,
 				E29C11532C875835002469A3 /* BookResponse.swift in Sources */,
@@ -796,6 +843,7 @@
 				E29C11D42C89F3D8002469A3 /* BookDetailsInteractor.swift in Sources */,
 				E29C115E2C876931002469A3 /* BooksTarget.swift in Sources */,
 				E29C114B2C875452002469A3 /* BookCell.swift in Sources */,
+				E252DF7B2C8E1E3B001D3DFB /* BooksCD+Class.swift in Sources */,
 				E29C11B42C89DE2E002469A3 /* HomeStoryboardId.swift in Sources */,
 				E2F3BE2F2C8714C600C86BA7 /* RoundedView.swift in Sources */,
 				E2F3BE1B2C87106B00C86BA7 /* UIApplicationProtocol.swift in Sources */,
@@ -806,6 +854,7 @@
 				E29C11AF2C89DE22002469A3 /* BooksDataSource.swift in Sources */,
 				E29C11AC2C89DDFA002469A3 /* TabBarInteractor.swift in Sources */,
 				E29C11B52C89DE2E002469A3 /* HomeAssembly.swift in Sources */,
+				E252DF632C8B16CD001D3DFB /* DBHandlerProtocol.swift in Sources */,
 				E29C11642C876CB8002469A3 /* OptionalExtensions.swift in Sources */,
 				E29C11A32C89DDE5002469A3 /* TabBarAssembly.swift in Sources */,
 				E2F3BE2A2C87134100C86BA7 /* ClientError.swift in Sources */,
@@ -820,16 +869,23 @@
 				E250E2F02C85EF4F00962FDC /* AppDelegate.swift in Sources */,
 				E24E43132C8725D4004199C2 /* RoundedImageView.swift in Sources */,
 				E2F3BE152C870EE800C86BA7 /* Stroryboard.swift in Sources */,
+				E252DF692C8B18F6001D3DFB /* CoreDataError.swift in Sources */,
 				E29C11CD2C89DF1D002469A3 /* FavoritesStoryboardId.swift in Sources */,
 				E29C11C62C89DE76002469A3 /* FavoritesViewController.swift in Sources */,
 				E2F3BE212C87114400C86BA7 /* TopViewControllerProtocol.swift in Sources */,
+				E252DF792C8B523B001D3DFB /* CoreDataHandler.swift in Sources */,
+				E29C11DE2C8B0C25002469A3 /* Offline.xcdatamodeld in Sources */,
 				E29C11AB2C89DDFA002469A3 /* TabBarItem.swift in Sources */,
 				E29C11772C885E37002469A3 /* UITabBar+SectionIndicator.swift in Sources */,
 				E2F3BE1F2C8710F000C86BA7 /* AlertPresenterProtocol.swift in Sources */,
 				E2F3BE312C87152400C86BA7 /* RootNavigatorProtocol.swift in Sources */,
 				E29C11752C885D8A002469A3 /* AppNavigationController.swift in Sources */,
+				E252DF702C8B4071001D3DFB /* BooksCD+Properties.swift in Sources */,
 				E2F3BE1D2C8710AF00C86BA7 /* ErrorHandlerProtocol.swift in Sources */,
+				E252DF6B2C8B1922001D3DFB /* CoreDataRepository.swift in Sources */,
+				E252DF752C8B4278001D3DFB /* LocalDataBaseManager.swift in Sources */,
 				E2F3BE172C870FA600C86BA7 /* AppError.swift in Sources */,
+				E252DF6E2C8B19AA001D3DFB /* MicroLogger.swift in Sources */,
 				E29C11BB2C89DE47002469A3 /* HomeRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1179,6 +1235,19 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		E29C11DC2C8B0C24002469A3 /* Offline.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E29C11DD2C8B0C24002469A3 /* Offline.xcdatamodel */,
+			);
+			currentVersion = E29C11DD2C8B0C24002469A3 /* Offline.xcdatamodel */;
+			path = Offline.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = E250E2E42C85EF4F00962FDC /* Project object */;
 }
