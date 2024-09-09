@@ -5,6 +5,8 @@
 //  Created by Ahmed Moncer on 03/09/2024.
 //
 
+import UIKit
+
 /// Extension of Optional. Adds following capability to String; Null/Nil handling in an elegant way.
 extension Swift.Optional where Wrapped == String {
     public var orEmptyString: String {
@@ -86,5 +88,28 @@ extension Swift.Optional where Wrapped == Bool {
             return unwrappedBool
         }
         return true
+    }
+}
+
+
+extension UIView {
+
+    func dropShadow() {
+        var shadowLayer: CAShapeLayer!
+        let cornerRadius: CGFloat = 16.0
+        let fillColor: UIColor = .black
+
+        if shadowLayer == nil {
+            shadowLayer = CAShapeLayer()
+            shadowLayer.path = UIBezierPath(roundedRect: bounds, cornerRadius: cornerRadius).cgPath
+            shadowLayer.fillColor = fillColor.cgColor
+            shadowLayer.shadowColor = UIColor.black.cgColor
+            shadowLayer.shadowPath = shadowLayer.path
+            shadowLayer.shadowOffset = CGSize(width: -2.0, height: 2.0)
+            shadowLayer.shadowOpacity = 5
+            shadowLayer.shadowRadius = 5
+
+            layer.insertSublayer(shadowLayer, at: 0)
+        }
     }
 }
