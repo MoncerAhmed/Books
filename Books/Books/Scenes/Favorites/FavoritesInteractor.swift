@@ -36,12 +36,7 @@ class FavoritesInteractor: FavoritesInteractorProtocol {
 
     func handleViewDidLoad() {
         offlineFavorites = localDBManager.fetchBooks().filter({ $0.isFavorite == true })
-        guard let booksToRetain = retainItem(array: offlineFavorites, itemToKeep: offlineFavorites.first) else { return }
         presenter.present(favorites: offlineFavorites)
-    }
-
-    private func retainItem<T: Equatable>(array: [T], itemToKeep: T) -> [T] {
-        return array.filter { $0 == itemToKeep }
     }
 }
 
