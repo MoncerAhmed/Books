@@ -22,20 +22,27 @@ class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol
     var router: FavoritesRouterProtocol?
     private var imageLoader: ImageLoaderProtocol?
 
+    var booksDataSource = BooksDataSource()
+
     // MARK: Outlets
 
-
+    @IBOutlet weak var favoritesCollectionView: UICollectionView!
+    
     // MARK: View lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
-        interactor?.handleViewDidLoad()
     }
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        interactor?.handleViewDidLoad()
     }
 
     // MARK: DI
@@ -55,9 +62,8 @@ class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol
     // MARK: Display Favorites
 
     func display(favorites: [BookModel]) {
-        favorites.forEach {
-            print("zou fav is: ", $0.id)
-        }
+        booksDataSource.set(books: favorites)
+        favoritesCollectionView.reloadData()
     }
 }
 
@@ -65,7 +71,44 @@ class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol
 
 private extension FavoritesViewController {
     func setUpUI() {
-//        favoritesCollectionView.dataSource = dataSource
-//        favoritesCollectionView.delegate = self
+        favoritesCollectionView.register(
+            .init(nibName: R.nib.bookCell.identifier,
+                  bundle: nil),
+            forCellWithReuseIdentifier: R.reuseIdentifier.bookCell.identifier
+        )
+        booksDataSource.set(imageLoader: imageLoader)
+        favoritesCollectionView?.dataSource = booksDataSource
+        favoritesCollectionView?.delegate = self
+    }
+}
+
+// MARK: UICollectionViewDelegate
+
+extension FavoritesViewController: UICollectionViewDelegate {}
+
+// MARK: UICollectionViewDelegateFlowLayout
+
+extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let collectionViewWidth = collectionView.frame.size.width
+        let collectionViewHeight = collectionViewWidth * 0.7
+
+        return CGSize(width: collectionViewWidth, height: collectionViewHeight)
+    }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        insetForSectionAt section: Int) -> UIEdgeInsets {
+
+        return UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+    }
+
+    // Distance Between Item Cells
+    func collectionView(
+        _ collectionView: UICollectionView,
+        layout collectionViewLayout: UICollectionViewLayout,
+        minimumLineSpacingForSectionAt section: Int
+    ) -> CGFloat {
+        32
     }
 }

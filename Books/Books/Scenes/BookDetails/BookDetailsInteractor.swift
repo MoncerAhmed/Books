@@ -18,7 +18,6 @@ class BookDetailsInteractor: BookDetailsInteractorProtocol {
     private let localDBManager: LocalDataBaseManagerProtocol
 
     private var book: BookModel?
-//    private var offlineBook: BookModel?
 
     init(
         presenter: BookDetailsPresenterProtocol,
@@ -33,6 +32,7 @@ class BookDetailsInteractor: BookDetailsInteractorProtocol {
         let offlineBook = localDBManager.fetchBooks().first(where: { $0.id == book.id })
         guard let offlineBook = offlineBook else {
             presenter?.present(book: book)
+            presenter?.presentFavoriteButton(isFavorite: book.isFavorite)
             return
         }
         presenter?.present(book: offlineBook)

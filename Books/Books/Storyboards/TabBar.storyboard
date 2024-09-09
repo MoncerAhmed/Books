@@ -34,8 +34,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" name="tab-bar-background"/>
-                        <color key="tintColor" systemColor="systemGreenColor"/>
-                        <color key="barTintColor" systemColor="systemGreenColor"/>
+                        <color key="tintColor" name="tab-bar-background"/>
+                        <color key="barTintColor" name="tab-bar-background"/>
                         <color key="selectedImageTintColor" systemColor="systemGreenColor"/>
                     </tabBar>
                 </tabBarController>
@@ -46,7 +46,7 @@
     </scenes>
     <resources>
         <namedColor name="tab-bar-background">
-            <color red="0.99999994039535522" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

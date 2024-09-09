@@ -17,24 +17,31 @@ class FavoritesInteractor: FavoritesInteractorProtocol {
     // MARK: Properties
 
     private var presenter: FavoritesPresenterProtocol
-    private let errorHandler: ErrorHandlerProtocol
+    private let localDBManager: LocalDataBaseManagerProtocol
 
-    private var localFavorites: [BookModel] = []
+    private var offlineFavorites: [BookModel] = []
 
     // MARK: DI
 
     init(
 
         presenter: FavoritesPresenterProtocol,
-        errorHandler: ErrorHandlerProtocol
+        localDBManager: LocalDataBaseManagerProtocol
     ) {
         self.presenter = presenter
-        self.errorHandler = errorHandler
+        self.localDBManager = localDBManager
     }
 
     // MARK: ViewDidLoad
 
     func handleViewDidLoad() {
+        offlineFavorites = localDBManager.fetchBooks().filter({ $0.isFavorite == true })
+        guard let booksToRetain = retainItem(array: offlineFavorites, itemToKeep: offlineFavorites.first) else { return }
+        presenter.present(favorites: offlineFavorites)
+    }
+
+    private func retainItem<T: Equatable>(array: [T], itemToKeep: T) -> [T] {
+        return array.filter { $0 == itemToKeep }
     }
 }
 

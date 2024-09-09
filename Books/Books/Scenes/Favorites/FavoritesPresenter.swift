@@ -27,7 +27,21 @@ class FavoritesPresenter: FavoritesPresenterProtocol {
     }
 
     func present(favorites: [BookModel]) {
-        // TODO: change type to array of favorites
-        viewController?.display(favorites: favorites)
+        let result = removeDuplicates(from: favorites)
+        viewController?.display(favorites: result)
+    }
+
+    private func removeDuplicates(from books: [BookModel]) -> [BookModel] {
+        var seenIds = Set<String>() // To keep track of unique IDs
+        let uniqueBooks = books.filter { book in
+            // Check if the book's id has been seen before
+            if seenIds.contains(book.id) {
+                return false // Duplicate, exclude this item
+            } else {
+                seenIds.insert(book.id) // Add the id to the set
+                return true // Keep this item
+            }
+        }
+        return uniqueBooks
     }
 }

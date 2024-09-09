@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct BookModel: Codable {
+struct BookModel: Codable, Equatable {
     let id: String
     let title: String
     let author: String
@@ -16,7 +16,7 @@ struct BookModel: Codable {
     var isFavorite: Bool
 }
 
-extension BookModel {
+extension BookModel: Hashable {
     // Convert Core Data object (BooksCD) to BookModel
     init(fromCoreData bookCD: BooksCD) {
         self.id = bookCD.id
