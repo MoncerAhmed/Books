@@ -11,8 +11,11 @@ import CoreData
 protocol LocalDataBaseManagerProtocol {
     func addBook(book: BookModel)
     func addBooks(books: [BookModel])
-    func deleteBook(book: BookModel)
+    func deleteBook(book: BooksCD)
     func fetchBooks() -> [BookModel]
+    func updateBookToFavorite(book: BookModel, isFavorite: Bool)
+
+    var context: NSManagedObjectContext { get set }
 }
 
 class LocalDataBaseManager: LocalDataBaseManagerProtocol {
@@ -31,13 +34,7 @@ class LocalDataBaseManager: LocalDataBaseManagerProtocol {
     // MARK: - Add Single Book
     func addBook(book: BookModel) {
         let newBook = BooksCD(context: context)
-        newBook.id = book.id
-        newBook.title = book.title
-        newBook.author = book.author
-        newBook.imageURL = book.imageURL
-        newBook.bookDescription = book.description
-        newBook.isFavorite = book.isFavorite
-
+        newBook.update(with: book)
         saveContext()
     }
 
@@ -45,26 +42,14 @@ class LocalDataBaseManager: LocalDataBaseManagerProtocol {
     func addBooks(books: [BookModel]) {
         for book in books {
             let newBook = BooksCD(context: context)
-            newBook.id = book.id
-            newBook.title = book.title
-            newBook.author = book.author
-            newBook.imageURL = book.imageURL
-            newBook.bookDescription = book.description
-            newBook.isFavorite = book.isFavorite
+            newBook.update(with: book)
         }
         saveContext()
     }
 
     // MARK: - Delete Book
-    func deleteBook(book: BookModel) {
-        let bookToDelete = BooksCD(context: context)
-        bookToDelete.id = book.id
-        bookToDelete.title = book.title
-        bookToDelete.author = book.author
-        bookToDelete.imageURL = book.imageURL
-        bookToDelete.bookDescription = book.description
-        bookToDelete.isFavorite = book.isFavorite
-        context.delete(bookToDelete)
+    func deleteBook(book: BooksCD) {
+        context.delete(book)
         saveContext()
     }
 
@@ -72,20 +57,8 @@ class LocalDataBaseManager: LocalDataBaseManagerProtocol {
     func fetchBooks() -> [BookModel] {
         let request: NSFetchRequest<BooksCD> = BooksCD.fetchRequest()
         do {
-            var booksToBeDisplayed: [BookModel] = []
-            let books = try context.fetch(request)
-            books.forEach {
-                let book = BookModel(
-                    id: $0.id,
-                    title: $0.title,
-                    author: $0.author,
-                    imageURL: $0.imageURL,
-                    description: $0.description,
-                    isFavorite: $0.isFavorite
-                )
-                booksToBeDisplayed.append(book)
-            }
-            return booksToBeDisplayed
+            let booksCD = try context.fetch(request)
+            return booksCD.map { BookModel(fromCoreData: $0) }
         } catch {
             print("Error fetching books: \(error.localizedDescription)")
             return []
@@ -93,9 +66,18 @@ class LocalDataBaseManager: LocalDataBaseManagerProtocol {
     }
 
     // MARK: - Update Book and Mark as Favorite
-    func updateBookToFavorite(book: BooksCD) {
-        book.isFavorite = true
-        saveContext()
+    func updateBookToFavorite(book: BookModel, isFavorite: Bool) {
+        let request: NSFetchRequest<BooksCD> = BooksCD.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@", book.id)
+
+        do {
+            if let bookCD = try context.fetch(request).first {
+                bookCD.isFavorite = isFavorite
+                saveContext()
+            }
+        } catch {
+            print("Error updating book: \(error.localizedDescription)")
+        }
     }
 
     // MARK: - Save Context

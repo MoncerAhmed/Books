@@ -31,7 +31,7 @@ class HomePresenter: HomePresenterProtocol {
                                       title: $0.title,
                                       author: $0.author,
                                       imageURL: $0.imageURL.orEmptyString,
-                                      description: $0.description,
+                                      bookDescription: $0.bookDescription,
                                       isFavorite: false)
             booksModel.append(bookModel)
         }

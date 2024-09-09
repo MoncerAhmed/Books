@@ -18,6 +18,7 @@ class BookDetailsInteractor: BookDetailsInteractorProtocol {
     private let localDBManager: LocalDataBaseManagerProtocol
 
     private var book: BookModel?
+//    private var offlineBook: BookModel?
 
     init(
         presenter: BookDetailsPresenterProtocol,
@@ -28,13 +29,32 @@ class BookDetailsInteractor: BookDetailsInteractorProtocol {
     }
 
     func handleBookDetail(with book: BookModel) {
-        presenter?.present(book: book)
-        self.book? = book
+        self.book = book
+        let offlineBook = localDBManager.fetchBooks().first(where: { $0.id == book.id })
+        guard let offlineBook = offlineBook else {
+            presenter?.present(book: book)
+            return
+        }
+        presenter?.present(book: offlineBook)
+        presenter?.presentFavoriteButton(isFavorite: offlineBook.isFavorite)
     }
 
     func handleFavoriteButtonTapped() {
         guard let book = book else { return }
-        !book.isFavorite ? localDBManager.addBook(book: book) : localDBManager.deleteBook(book: book)
-        presenter?.presentFavoriteButton(isFavorite: book.isFavorite)
+
+        let offlineBook = localDBManager.fetchBooks().first(where: { $0.id == book.id })
+        guard var bookToDisplay = offlineBook else {
+            localDBManager.updateBookToFavorite(
+                book: book,
+                isFavorite: !book.isFavorite
+            )
+            presenter?.presentFavoriteButton(isFavorite: book.isFavorite)
+            return
+        }
+        localDBManager.updateBookToFavorite(
+            book: bookToDisplay,
+            isFavorite: !bookToDisplay.isFavorite
+        )
+        presenter?.presentFavoriteButton(isFavorite: !bookToDisplay.isFavorite)
     }
 }

@@ -22,4 +22,16 @@ extension BooksCD {
     @NSManaged public var isFavorite: Bool
 }
 
-extension BooksCD: Identifiable {} 
+extension BooksCD {
+    // Update Core Data entity with BookModel data
+    func update(with model: BookModel) {
+        self.id = model.id
+        self.title = model.title
+        self.author = model.author
+        self.imageURL = model.imageURL
+        self.bookDescription = model.bookDescription
+        self.isFavorite = model.isFavorite
+    }
+}
+
+extension BooksCD: Identifiable {}

@@ -75,7 +75,7 @@ class BookDetailsViewController: UIViewController, BookDetailsViewControllerProt
     func displayDetails(with book: BookModel) {
         bookTitle.text = book.title
         bookAuthor.text = book.author
-        bookDescription.text = book.description
+        bookDescription.text = book.bookDescription
         if let imageURL = URL(string: book.imageURL) {
             imageLoader?.loadImage(
                 url: imageURL,

@@ -12,6 +12,18 @@ struct BookModel: Codable {
     let title: String
     let author: String
     let imageURL: String
-    let description: String
+    let bookDescription: String
     var isFavorite: Bool
+}
+
+extension BookModel {
+    // Convert Core Data object (BooksCD) to BookModel
+    init(fromCoreData bookCD: BooksCD) {
+        self.id = bookCD.id
+        self.title = bookCD.title
+        self.author = bookCD.author
+        self.imageURL = bookCD.imageURL
+        self.bookDescription = bookCD.bookDescription
+        self.isFavorite = bookCD.isFavorite
+    }
 }
