@@ -10,6 +10,7 @@ import UIKit
 protocol HomePresenterProtocol {
     func set(viewController: HomeViewControllerProtocol)
     func presentBooks(books: [BookResponse])
+    func presentFilteredBook(books: [BookResponse])
 }
 
 class HomePresenter: HomePresenterProtocol {
@@ -25,8 +26,18 @@ class HomePresenter: HomePresenterProtocol {
     // MARK: Presentation
 
     func presentBooks(books: [BookResponse]) {
+      let booksModel = createBooksModel(from: books)
+        viewController?.displayBooks(with: booksModel)
+    }
+
+    func presentFilteredBook(books: [BookResponse]) {
+       let filterdBooks = createBooksModel(from: books)
+        viewController?.displayFilteredBooks(with: filterdBooks)
+    }
+
+    private func createBooksModel(from response: [BookResponse]) -> [BookModel] {
         var booksModel: [BookModel] = []
-        books.forEach {
+        response.forEach {
             let bookModel = BookModel(id: $0.id,
                                       title: $0.title,
                                       author: $0.author,
@@ -35,6 +46,6 @@ class HomePresenter: HomePresenterProtocol {
                                       isFavorite: false)
             booksModel.append(bookModel)
         }
-        viewController?.displayBooks(with: booksModel)
+        return booksModel
     }
 }

@@ -13,6 +13,7 @@ protocol HomeViewControllerProtocol: UIViewControllerRouting {
     func set(imageLoader: ImageLoaderProtocol)
 
     func displayBooks(with books: [BookModel])
+    func displayFilteredBooks(with books: [BookModel])
 }
 
 class HomeViewController: UIViewController, HomeViewControllerProtocol {
@@ -23,7 +24,7 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
     private var router: HomeRouterProtocol?
     private var imageLoader: ImageLoaderProtocol?
 
-    var booksDataSource = BooksDataSource()
+    private var booksDataSource = BooksDataSource()
 
     // MARK: Outlets
 
@@ -70,6 +71,24 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
     func displayBooks(with books: [BookModel]) {
         booksDataSource.set(books: books)
         booksCollectionView.reloadData()
+    }
+
+    func displayFilteredBooks(with books: [BookModel]) {
+        booksDataSource.set(books: books)
+        booksCollectionView.reloadData()
+
+    }
+}
+
+// MARK: UICollectionViewDelegate
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filterBooks(searchText: searchText)
+    }
+
+    private func filterBooks(searchText: String) {
+        interactor?.handleSearch(searchText: searchText)
     }
 }
 

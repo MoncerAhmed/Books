@@ -67,7 +67,7 @@
                                 <color key="tintColor" systemColor="systemBlueColor"/>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="0.90000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="tab-bar-background"/>
                         <constraints>
                             <constraint firstItem="bmQ-L6-97Y" firstAttribute="leading" secondItem="OhU-nJ-jKt" secondAttribute="leading" constant="18" id="1bJ-vQ-aHK"/>
                             <constraint firstAttribute="trailing" secondItem="bmQ-L6-97Y" secondAttribute="trailing" constant="18" id="5XO-2z-lvP"/>
@@ -82,6 +82,7 @@
                     </view>
                 </subviews>
                 <color key="backgroundColor" name="tab-bar-background"/>
+                <color key="tintColor" name="tab-bar-background"/>
                 <constraints>
                     <constraint firstItem="OhU-nJ-jKt" firstAttribute="leading" secondItem="TjD-Oe-fNj" secondAttribute="leading" constant="18" id="2Ip-QI-gZL"/>
                     <constraint firstAttribute="trailing" secondItem="OhU-nJ-jKt" secondAttribute="trailing" constant="18" id="3Ef-cP-tyu"/>

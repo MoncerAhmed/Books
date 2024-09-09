@@ -10,7 +10,7 @@ import UIKit
 class BooksDataSource: NSObject, UICollectionViewDataSource {
 
     private var imageLoader: ImageLoaderProtocol?
-    private var books: [BookModel] = []
+    var books: [BookModel] = []
 
     func set(books: [BookModel]) {
         self.books = books

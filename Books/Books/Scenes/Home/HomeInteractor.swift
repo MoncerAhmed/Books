@@ -10,6 +10,7 @@ import Combine
 
 protocol HomeInteractorProtocol {
     func handleViewDidLoad()
+    func handleSearch(searchText: String)
 }
 
 class HomeInteractor: HomeInteractorProtocol {
@@ -21,6 +22,7 @@ class HomeInteractor: HomeInteractorProtocol {
     private let errorHandler: ErrorHandlerProtocol
     private var anyCancellables: Set<AnyCancellable> = Set<AnyCancellable>()
     private var books: [BookResponse] = []
+    private var filteredBooks: [BookResponse] = []
 
     init(
         presenter: HomePresenterProtocol,
@@ -46,5 +48,16 @@ class HomeInteractor: HomeInteractorProtocol {
                 self.books = response
             })
             .store(in: &anyCancellables)
+    }
+
+    func handleSearch(searchText: String) {
+        guard !searchText.isEmpty else {
+            presenter?.presentFilteredBook(books: books)
+            return }
+        filteredBooks = books.filter { book in
+            book.title.lowercased().contains(searchText.lowercased()) ||
+            book.author.lowercased().contains(searchText.lowercased())
+        }
+        presenter?.presentFilteredBook(books: filteredBooks)
     }
 }

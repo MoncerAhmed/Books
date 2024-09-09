@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hmd-hf-l6N">
-                                <rect key="frame" x="16" y="64" width="361" height="788"/>
+                                <rect key="frame" x="16" y="103" width="361" height="749"/>
                                 <subviews>
                                     <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search by author or book name" translatesAutoresizingMaskIntoConstraints="NO" id="mlK-E4-qbD">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="103"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="64"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="systemGreenColor"/>
                                         <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,7 +33,7 @@
                                         </connections>
                                     </searchBar>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Bek-EK-xfI">
-                                        <rect key="frame" x="0.0" y="111" width="361" height="677"/>
+                                        <rect key="frame" x="0.0" y="72" width="361" height="677"/>
                                         <color key="backgroundColor" name="tab-bar-background"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="naK-ub-MTc">
                                             <size key="itemSize" width="128" height="128"/>
@@ -62,7 +62,7 @@
                             <constraint firstItem="Hmd-hf-l6N" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="54e-F3-RCO"/>
                             <constraint firstAttribute="bottom" secondItem="Hmd-hf-l6N" secondAttribute="bottom" id="HdU-oI-GK7"/>
                             <constraint firstAttribute="trailing" secondItem="Hmd-hf-l6N" secondAttribute="trailing" constant="16" id="Rmd-Jo-hCB"/>
-                            <constraint firstItem="Hmd-hf-l6N" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="64" id="ehg-jv-Z7f"/>
+                            <constraint firstItem="Hmd-hf-l6N" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="ehg-jv-Z7f"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4KX-cJ-ygA"/>
