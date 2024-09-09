@@ -9,7 +9,7 @@ import Foundation
 
 enum Constants {
     enum URLs {
-        static var apiURL = URL(string: "https://66d2def6184dce1713cea0c8.mockapi.io/appical/books")
+        static var apiURL = URL(string: "https://66d317bf184dce1713cf3ffd.mockapi.io/books/api")
     }
     enum CoreDataStrings {
         static var booksCD = "BooksCD"

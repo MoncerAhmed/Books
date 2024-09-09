@@ -3,9 +3,13 @@
     <entity name="BooksCD" representedClassName=".BooksCD" syncable="YES">
         <attribute name="author" attributeType="String"/>
         <attribute name="bookDescription" attributeType="String"/>
+        <attribute name="coverURL" attributeType="String"/>
+        <attribute name="createdAt" optional="YES" attributeType="String"/>
         <attribute name="id" attributeType="String"/>
-        <attribute name="imageURL" attributeType="String"/>
         <attribute name="isFavorite" attributeType="Boolean" usesScalarValueType="YES"/>
+        <attribute name="reads" optional="YES" attributeType="String"/>
+        <attribute name="reviews" optional="YES" attributeType="String"/>
+        <attribute name="summary" optional="YES" attributeType="String"/>
         <attribute name="title" attributeType="String"/>
     </entity>
 </model>

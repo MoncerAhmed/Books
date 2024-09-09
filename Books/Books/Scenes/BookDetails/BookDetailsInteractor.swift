@@ -44,6 +44,7 @@ class BookDetailsInteractor: BookDetailsInteractorProtocol {
 
         let offlineBook = localDBManager.fetchBooks().first(where: { $0.id == book.id })
         guard var bookToDisplay = offlineBook else {
+            localDBManager.addBook(book: book)
             localDBManager.updateBookToFavorite(
                 book: book,
                 isFavorite: !book.isFavorite

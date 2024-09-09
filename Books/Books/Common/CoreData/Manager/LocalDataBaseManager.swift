@@ -74,6 +74,8 @@ class LocalDataBaseManager: LocalDataBaseManagerProtocol {
             if let bookCD = try context.fetch(request).first {
                 bookCD.isFavorite = isFavorite
                 saveContext()
+            } else {
+                addBook(book: book)    
             }
         } catch {
             print("Error updating book: \(error.localizedDescription)")

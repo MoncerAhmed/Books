@@ -21,7 +21,7 @@ enum BooksTarget: TargetType {
     var path: String {
         switch self {
         case .books:
-            return "/getBooks" }
+            return "/Books" }
         }
 
     var method: Method { return .get }

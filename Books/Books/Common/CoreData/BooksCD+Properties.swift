@@ -17,8 +17,12 @@ extension BooksCD {
     @NSManaged public var id: String
     @NSManaged public var title: String
     @NSManaged public var author: String
-    @NSManaged public var imageURL: String
+    @NSManaged public var coverURL: String
     @NSManaged public var bookDescription: String
+    @NSManaged public var reads: String
+    @NSManaged public var reviews: String
+    @NSManaged public var summary: String
+    @NSManaged public var createdAt: String
     @NSManaged public var isFavorite: Bool
 }
 
@@ -28,8 +32,12 @@ extension BooksCD {
         self.id = model.id
         self.title = model.title
         self.author = model.author
-        self.imageURL = model.imageURL
+        self.coverURL = model.coverURL
         self.bookDescription = model.bookDescription
+        self.reads = model.reads
+        self.reviews = model.reviews
+        self.summary = model.summary
+        self.createdAt = model.createdAt
         self.isFavorite = model.isFavorite
     }
 }
