@@ -30,13 +30,11 @@ class SharedAssembly: Assembly {
             return container
         }.inObjectScope(.container)
 
-        // MARK: - DBHandlerProtocol
-        container.register(DBHandlerProtocol.self) {
-            return CoreDataHandler.init(container: $0 ~> (NSPersistentContainerProtocl.self))
-        }.inObjectScope(.container)
+        // MARK: - LocalDataBaseManagerProtocol
 
-        container.autoregister(LocalDataBaseManagerProtocol.self, initializer: LocalDataBaseManager.init)
-            .inObjectScope(.container)
+        container.register(LocalDataBaseManagerProtocol.self) {
+            return LocalDataBaseManager.init(container: $0 ~> (NSPersistentContainerProtocl.self))
+        }.inObjectScope(.container)
 
         // MARK: - NetworkObserverProtocol
         container.register(NetworkObserverProtocol.self) { _ in

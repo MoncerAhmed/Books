@@ -15,13 +15,16 @@ protocol BookDetailsInteractorProtocol {
 
 class BookDetailsInteractor: BookDetailsInteractorProtocol {
     private var presenter: BookDetailsPresenterProtocol?
+    private let localDBManager: LocalDataBaseManagerProtocol
 
     private var book: BookModel?
 
     init(
-        presenter: BookDetailsPresenterProtocol
+        presenter: BookDetailsPresenterProtocol,
+        localDBManager: LocalDataBaseManagerProtocol
     ) {
         self.presenter = presenter
+        self.localDBManager = localDBManager
     }
 
     func handleBookDetail(with book: BookModel) {
@@ -30,8 +33,8 @@ class BookDetailsInteractor: BookDetailsInteractorProtocol {
     }
 
     func handleFavoriteButtonTapped() {
-        guard var isFavorite = book?.isFavorite else { return }
-        isFavorite.toggle() // can be tested after favorites implementation
-        presenter?.presentFavoriteButton(isFavorite: isFavorite)
+        guard let book = book else { return }
+        !book.isFavorite ? localDBManager.addBook(book: book) : localDBManager.deleteBook(book: book)
+        presenter?.presentFavoriteButton(isFavorite: book.isFavorite)
     }
 }
