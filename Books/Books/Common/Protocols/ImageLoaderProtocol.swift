@@ -53,22 +53,4 @@ class ImageLoader: ImageLoaderProtocol {
                 completion?(image)
             }
         }
-
-    func loadImage(
-        url: URL,
-        into: RoundedImageView,
-        placeholder: UIImage? = nil,
-        completion: ((UIImage) -> Void)? = nil) {
-            into.image = placeholder
-            pipeLine.loadImage(with: url, queue: nil, progress: nil) { [completion] result in
-                switch result {
-                case .success(let imageResponse):
-                    into.fillImage = imageResponse.image
-                case .failure(let error):
-                    print(error)
-                }
-                guard let image = into.fillImage else { return }
-                completion?(image)
-            }
-        }
 }
