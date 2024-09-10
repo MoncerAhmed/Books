@@ -14,7 +14,9 @@ class BookCell: UICollectionViewCell {
     @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var bookAuthorLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
-    
+    @IBOutlet weak var readsLabel: UILabel!
+    @IBOutlet weak var reviewsLabel: UILabel!
+
     override func awakeFromNib() {
         super.awakeFromNib()
         containerView.dropShadow()
@@ -23,5 +25,7 @@ class BookCell: UICollectionViewCell {
     func configure(with book: BookModel) {
         bookTitleLabel.text = book.title
         bookAuthorLabel.text = book.author
+        readsLabel.text = book.reads + " reads"
+        reviewsLabel.text = book.reviews + " reviews"
     }
 }

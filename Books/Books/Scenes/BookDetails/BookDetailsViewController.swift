@@ -33,7 +33,10 @@ class BookDetailsViewController: UIViewController, BookDetailsViewControllerProt
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var bookAuthor: UILabel!
     @IBOutlet weak var bookDescription: UILabel!
-    
+    @IBOutlet weak var bookSummary: UILabel!
+    @IBOutlet weak var bookReads: UILabel!
+    @IBOutlet weak var bookReviews: UILabel!
+
     // MARK: View lifecycle
 
     override func viewDidLoad() {
@@ -76,6 +79,9 @@ class BookDetailsViewController: UIViewController, BookDetailsViewControllerProt
         bookTitle.text = book.title
         bookAuthor.text = book.author
         bookDescription.text = book.bookDescription
+        bookSummary.text = book.summary
+        bookReads.text = book.reads + " reads"
+        bookReviews.text = book.reviews + " reviews"
         if let imageURL = URL(string: book.coverURL) {
             imageLoader?.loadImage(
                 url: imageURL,
