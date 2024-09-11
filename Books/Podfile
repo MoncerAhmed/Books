@@ -10,7 +10,6 @@ def shared_pods
 
   # Networking
   pod 'Moya'
-  pod 'p2.OAuth2'
   pod 'Wormholy'
 
   # Image
@@ -22,7 +21,6 @@ def shared_pods
   # Other
   pod 'R.swift'
   pod 'Device'
-  pod 'AutoKeyboardScrollView'
   pod 'lottie-ios'
 
 end
