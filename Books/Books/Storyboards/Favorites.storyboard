@@ -18,6 +18,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dpQ-Ex-eH9">
+                                <rect key="frame" x="16" y="119" width="361" height="683"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Favorites to display currently" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rqw-2b-0OY">
+                                        <rect key="frame" x="26.666666666666657" y="329" width="307.66666666666674" height="25.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="tab-bar-background"/>
+                                <constraints>
+                                    <constraint firstItem="Rqw-2b-0OY" firstAttribute="centerY" secondItem="dpQ-Ex-eH9" secondAttribute="centerY" id="Cv0-MX-uIv"/>
+                                    <constraint firstItem="Rqw-2b-0OY" firstAttribute="centerX" secondItem="dpQ-Ex-eH9" secondAttribute="centerX" id="Jn5-sF-ZQb"/>
+                                </constraints>
+                            </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="f5A-fU-ftN">
                                 <rect key="frame" x="16" y="64" width="361" height="788"/>
                                 <subviews>
@@ -48,15 +64,20 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" name="tab-bar-background"/>
                         <constraints>
+                            <constraint firstItem="dpQ-Ex-eH9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="7i8-4x-moP"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="dpQ-Ex-eH9" secondAttribute="trailing" constant="16" id="BhU-zh-GB8"/>
                             <constraint firstAttribute="trailing" secondItem="f5A-fU-ftN" secondAttribute="trailing" constant="16" id="Jfj-CK-zUv"/>
                             <constraint firstAttribute="bottom" secondItem="f5A-fU-ftN" secondAttribute="bottom" id="NuO-MO-Edt"/>
                             <constraint firstItem="f5A-fU-ftN" firstAttribute="leading" secondItem="5EZ-qb-Rvc" secondAttribute="leading" constant="16" id="OEp-cT-DNW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="dpQ-Ex-eH9" secondAttribute="bottom" constant="16" id="nOj-rH-k73"/>
+                            <constraint firstItem="dpQ-Ex-eH9" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="16" id="tFR-F1-zQk"/>
                             <constraint firstItem="f5A-fU-ftN" firstAttribute="top" secondItem="5EZ-qb-Rvc" secondAttribute="top" constant="64" id="u50-Uj-NFc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Dgw-pT-ckz"/>
                     <connections>
                         <outlet property="favoritesCollectionView" destination="zvM-MS-ZJC" id="qzr-Q2-v4n"/>
+                        <outlet property="noFavoritesView" destination="dpQ-Ex-eH9" id="V3X-0r-nad"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

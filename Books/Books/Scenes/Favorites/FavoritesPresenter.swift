@@ -12,6 +12,7 @@ protocol FavoritesPresenterProtocol {
     func set(viewController: FavoritesViewControllerProtocol)
 
     func present(favorites: [BookModel])
+    func presentEmptyFavorites()
 }
 
 class FavoritesPresenter: FavoritesPresenterProtocol {
@@ -29,6 +30,10 @@ class FavoritesPresenter: FavoritesPresenterProtocol {
     func present(favorites: [BookModel]) {
         let result = removeDuplicates(from: favorites)
         viewController?.display(favorites: result)
+    }
+
+    func presentEmptyFavorites() {
+        viewController?.displayEmptyFavorites()
     }
 
     private func removeDuplicates(from books: [BookModel]) -> [BookModel] {

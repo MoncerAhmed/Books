@@ -36,6 +36,10 @@ class FavoritesInteractor: FavoritesInteractorProtocol {
 
     func handleViewDidLoad() {
         offlineFavorites = localDBManager.fetchBooks().filter({ $0.isFavorite == true })
+        guard !offlineFavorites.isEmpty else {
+            presenter.presentEmptyFavorites()
+            return
+        }
         presenter.present(favorites: offlineFavorites)
     }
 }

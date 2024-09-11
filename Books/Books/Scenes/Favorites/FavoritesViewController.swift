@@ -13,6 +13,7 @@ protocol FavoritesViewControllerProtocol: UIViewControllerRouting {
     func set(router: FavoritesRouterProtocol)
     func set(imageLoader: ImageLoaderProtocol)
     func display(favorites: [BookModel])
+    func displayEmptyFavorites()
 }
 
 class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol {
@@ -28,6 +29,7 @@ class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol
 
     @IBOutlet weak var favoritesCollectionView: UICollectionView!
     
+    @IBOutlet weak var noFavoritesView: UIView!
     // MARK: View lifecycle
 
     override func viewDidLoad() {
@@ -62,8 +64,15 @@ class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol
     // MARK: Display Favorites
 
     func display(favorites: [BookModel]) {
+        noFavoritesView.isHidden = true
+        favoritesCollectionView.isHidden = false
         booksDataSource.set(books: favorites)
         favoritesCollectionView.reloadData()
+    }
+
+    func displayEmptyFavorites() {
+        noFavoritesView.isHidden = false
+        favoritesCollectionView.isHidden = true
     }
 }
 
