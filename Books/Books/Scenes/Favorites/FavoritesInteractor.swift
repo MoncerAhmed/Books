@@ -10,6 +10,7 @@ import UIKit
 //sourcery: AutoMockable
 protocol FavoritesInteractorProtocol {
     func handleViewDidLoad()
+    func handleFavoriteButtonTapped(id: String)
 }
 
 class FavoritesInteractor: FavoritesInteractorProtocol {
@@ -40,6 +41,17 @@ class FavoritesInteractor: FavoritesInteractorProtocol {
             presenter.presentEmptyFavorites()
             return
         }
+        presenter.present(favorites: offlineFavorites)
+    }
+
+    func handleFavoriteButtonTapped(id: String) {
+        let book = localDBManager.fetchBooks().first(where: { $0.id == id })
+        guard let book = book else { return }
+        localDBManager.updateBookToFavorite(
+            book: book,
+            isFavorite: !book.isFavorite
+        )
+        offlineFavorites = localDBManager.fetchBooks().filter({ $0.isFavorite == true })
         presenter.present(favorites: offlineFavorites)
     }
 }

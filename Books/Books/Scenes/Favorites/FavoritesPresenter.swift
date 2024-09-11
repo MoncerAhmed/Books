@@ -29,7 +29,7 @@ class FavoritesPresenter: FavoritesPresenterProtocol {
 
     func present(favorites: [BookModel]) {
         let result = removeDuplicates(from: favorites)
-        viewController?.display(favorites: result)
+        favorites.isEmpty ? presentEmptyFavorites() : viewController?.display(favorites: result)
     }
 
     func presentEmptyFavorites() {

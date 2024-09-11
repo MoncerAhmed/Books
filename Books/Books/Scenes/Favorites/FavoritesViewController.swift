@@ -86,10 +86,20 @@ private extension FavoritesViewController {
             forCellWithReuseIdentifier: R.reuseIdentifier.bookCell.identifier
         )
         booksDataSource.set(imageLoader: imageLoader)
+        booksDataSource.set(delegate: self)
         favoritesCollectionView?.dataSource = booksDataSource
         favoritesCollectionView?.delegate = self
     }
 }
+
+// MARK: UICollectionViewDelegate
+
+extension FavoritesViewController: FavoritesDelegate {
+    func favoritesButtonTapped(with id: String) {
+        interactor?.handleFavoriteButtonTapped(id: id)
+    }
+}
+
 
 // MARK: UICollectionViewDelegate
 

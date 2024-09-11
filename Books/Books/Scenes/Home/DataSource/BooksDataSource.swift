@@ -12,6 +12,8 @@ class BooksDataSource: NSObject, UICollectionViewDataSource {
     // MARK: - Properties
 
     private var imageLoader: ImageLoaderProtocol?
+    private weak var delegate: FavoritesDelegate?
+
     var books: [BookModel] = []
     private var isComingFromHome = false
 
@@ -22,6 +24,10 @@ class BooksDataSource: NSObject, UICollectionViewDataSource {
 
     func set(imageLoader: ImageLoaderProtocol?) {
         self.imageLoader = imageLoader
+    }
+    
+    func set(delegate: FavoritesDelegate) {
+        self.delegate = delegate
     }
 
     func item(at index: Int) -> BookModel {
@@ -59,7 +65,8 @@ class BooksDataSource: NSObject, UICollectionViewDataSource {
                                    completion: nil)
             cell.configure(
                 with: books[indexPath.row],
-                isComingFromHome: isComingFromHome
+                isComingFromHome: isComingFromHome,
+                delegate: delegate
             )
         }
         return cell

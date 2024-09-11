@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FavoritesDelegate: AnyObject {
-    func favoritesButtonTapped()
+    func favoritesButtonTapped(with id: String)
 }
 
 class BookCell: UICollectionViewCell {
@@ -23,13 +23,20 @@ class BookCell: UICollectionViewCell {
     @IBOutlet weak var favoritesButton: UIButton!
     
     private weak var delegate: FavoritesDelegate?
+    private var id: String?
 
     override func awakeFromNib() {
         super.awakeFromNib()
         containerView.dropShadow()
     }
 
-    func configure(with book: BookModel, isComingFromHome: Bool) {
+    func configure(with book: BookModel,
+                   isComingFromHome: Bool,
+                   delegate: FavoritesDelegate? = nil
+    ) {
+        self.id = book.id
+        self.delegate = delegate
+
         favoritesButton.isHidden = isComingFromHome
         bookTitleLabel.text = book.title
         bookAuthorLabel.text = book.author
@@ -38,6 +45,6 @@ class BookCell: UICollectionViewCell {
     }
 
     @IBAction func favoritesButtonTapped(_ sender: Any) {
-        delegate?.favoritesButtonTapped()
+        delegate?.favoritesButtonTapped(with: id.orEmptyString)
     }
 }
