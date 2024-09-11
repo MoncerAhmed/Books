@@ -9,11 +9,15 @@ import UIKit
 
 class BooksDataSource: NSObject, UICollectionViewDataSource {
 
+    // MARK: - Properties
+
     private var imageLoader: ImageLoaderProtocol?
     var books: [BookModel] = []
+    private var isComingFromHome = false
 
-    func set(books: [BookModel]) {
+    func set(books: [BookModel], isComingFromHome: Bool) {
         self.books = books
+        self.isComingFromHome = isComingFromHome
     }
 
     func set(imageLoader: ImageLoaderProtocol?) {
@@ -53,7 +57,10 @@ class BooksDataSource: NSObject, UICollectionViewDataSource {
                                    into: cell.bookImageView,
                                    placeholder: nil,
                                    completion: nil)
-            cell.configure(with: books[indexPath.row])
+            cell.configure(
+                with: books[indexPath.row],
+                isComingFromHome: isComingFromHome
+            )
         }
         return cell
     }

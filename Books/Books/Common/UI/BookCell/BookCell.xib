@@ -49,23 +49,42 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OhU-nJ-jKt" customClass="RoundedView" customModule="Books" customModuleProvider="target">
-                        <rect key="frame" x="0.0" y="97.333333333333329" width="335" height="136.66666666666669"/>
+                        <rect key="frame" x="0.0" y="94.666666666666671" width="335" height="139.33333333333331"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="bmQ-L6-97Y">
-                                <rect key="frame" x="18" y="10.000000000000007" width="299" height="111.66666666666669"/>
+                                <rect key="frame" x="18" y="9.9999999999999929" width="299" height="114.33333333333331"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bou-lI-m7X">
-                                        <rect key="frame" x="0.0" y="0.0" width="299" height="22.333333333333332"/>
-                                        <fontDescription key="fontDescription" name="Lora-Bold" family="Lora" pointSize="19"/>
-                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v3J-gf-jVB">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="25"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bou-lI-m7X">
+                                                <rect key="frame" x="0.0" y="0.0" width="274" height="25"/>
+                                                <fontDescription key="fontDescription" name="Lora-Bold" family="Lora" pointSize="19"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oeN-TI-qDv">
+                                                <rect key="frame" x="274" y="0.0" width="25" height="25"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="25" id="KPs-YX-qCm"/>
+                                                    <constraint firstAttribute="width" constant="25" id="V5w-Ya-vod"/>
+                                                    <constraint firstAttribute="height" constant="25" id="gem-Vq-BMA"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="bookmark" catalog="system" title=" "/>
+                                                <connections>
+                                                    <action selector="favoritesButtonTapped:" destination="1r2-TD-Cjv" eventType="touchUpInside" id="Bk3-F2-Skk"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="Author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YNB-0d-oYD">
-                                        <rect key="frame" x="0.0" y="34.333333333333329" width="299" height="15.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="36.999999999999986" width="299" height="15.333333333333336"/>
                                         <fontDescription key="fontDescription" name="Lora-Regular" family="Lora" pointSize="13"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="j8I-B1-da4">
-                                        <rect key="frame" x="0.0" y="61.666666666666671" width="299" height="50"/>
+                                        <rect key="frame" x="0.0" y="64.333333333333329" width="299" height="50"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KZe-1l-DCk">
                                                 <rect key="frame" x="0.0" y="0.0" width="74.666666666666671" height="50"/>
@@ -184,6 +203,7 @@
                 <outlet property="bookImageView" destination="PVw-SZ-PBo" id="Hde-le-UIL"/>
                 <outlet property="bookTitleLabel" destination="bou-lI-m7X" id="gN4-OG-3Ru"/>
                 <outlet property="containerView" destination="TjD-Oe-fNj" id="N4a-tM-ixL"/>
+                <outlet property="favoritesButton" destination="oeN-TI-qDv" id="JG9-IJ-M5D"/>
                 <outlet property="readsLabel" destination="fqp-g8-0xx" id="RC5-3F-woK"/>
                 <outlet property="reviewsLabel" destination="VNw-GL-PZV" id="q9t-iV-1BI"/>
             </connections>
@@ -191,6 +211,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="bookmark" catalog="system" width="110" height="128"/>
         <image name="person.2" catalog="system" width="128" height="87"/>
         <image name="star.fill" catalog="system" width="128" height="116"/>
         <namedColor name="tab-bar-background">

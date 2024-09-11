@@ -69,12 +69,12 @@ class HomeViewController: UIViewController, HomeViewControllerProtocol {
     // MARK: Display
 
     func displayBooks(with books: [BookModel]) {
-        booksDataSource.set(books: books)
+        booksDataSource.set(books: books, isComingFromHome: true)
         booksCollectionView.reloadData()
     }
 
     func displayFilteredBooks(with books: [BookModel]) {
-        booksDataSource.set(books: books)
+        booksDataSource.set(books: books, isComingFromHome: true)
         booksCollectionView.reloadData()
 
     }

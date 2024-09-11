@@ -66,7 +66,7 @@ class FavoritesViewController: UIViewController, FavoritesViewControllerProtocol
     func display(favorites: [BookModel]) {
         noFavoritesView.isHidden = true
         favoritesCollectionView.isHidden = false
-        booksDataSource.set(books: favorites)
+        booksDataSource.set(books: favorites, isComingFromHome: false)
         favoritesCollectionView.reloadData()
     }
 
